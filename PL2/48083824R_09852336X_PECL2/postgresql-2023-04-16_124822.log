@@ -1,0 +1,592 @@
+48083824R 09852336X  LOG:  el sistema de bases de datos fue apagado en 2023-04-16 12:48:19 CEST
+48083824R 09852336X ::1(64342) LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+48083824R 09852336X ::1(54780) LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+48083824R 09852336X ::1(63844) LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+48083824R 09852336X ::1(54707) LOG:  no se pudo enviar datos al cliente: An existing connection was forcibly closed by the remote host.
+	
+48083824R 09852336X ::1(54707) SENTENCIA:  SELECT * FROM peliculas.criticas
+	ORDER BY fecha ASC, codigo_pelicula_peliculas ASC, codigo_personas_personas ASC 
+48083824R 09852336X ::1(54707) FATAL:  se ha perdido la conexión al cliente
+48083824R 09852336X ::1(54707) SENTENCIA:  SELECT * FROM peliculas.criticas
+	ORDER BY fecha ASC, codigo_pelicula_peliculas ASC, codigo_personas_personas ASC 
+48083824R 09852336X ::1(53044) LOG:  no se pudo enviar datos al cliente: An existing connection was forcibly closed by the remote host.
+	
+48083824R 09852336X ::1(53044) SENTENCIA:  SELECT * FROM peliculas.criticas
+	ORDER BY fecha ASC, codigo_pelicula_peliculas ASC, codigo_personas_personas ASC 
+48083824R 09852336X ::1(53044) FATAL:  se ha perdido la conexión al cliente
+48083824R 09852336X ::1(53044) SENTENCIA:  SELECT * FROM peliculas.criticas
+	ORDER BY fecha ASC, codigo_pelicula_peliculas ASC, codigo_personas_personas ASC 
+48083824R 09852336X ::1(59213) LOG:  no se pudo enviar datos al cliente: An existing connection was forcibly closed by the remote host.
+	
+48083824R 09852336X ::1(59213) SENTENCIA:  SELECT * FROM peliculas.criticas
+	ORDER BY fecha ASC, codigo_pelicula_peliculas ASC, codigo_personas_personas ASC 
+48083824R 09852336X ::1(59213) FATAL:  se ha perdido la conexión al cliente
+48083824R 09852336X ::1(59213) SENTENCIA:  SELECT * FROM peliculas.criticas
+	ORDER BY fecha ASC, codigo_pelicula_peliculas ASC, codigo_personas_personas ASC 
+48083824R 09852336X  LOG:  empezando checkpoint: time
+48083824R 09852336X  LOG:  checkpoint completado: se escribi� 3 buffers (0.0%); 0 archivo(s) de WAL a�adido(s), 0 eliminado(s), 0 reciclado(s); escritura=0.004 s, sincronizaci�n=0.010 s, total=0.035 s; archivos sincronizados=4, m�s largo=0.003 s, promedio=0.003 s; distancia=0 kB, estimado=0 kB
+48083824R 09852336X ::1(53580) ERROR:  no existe la relación «peliculas» en carácter 104
+48083824R 09852336X ::1(53580) SENTENCIA:  SELECT
+	  COUNT(*) * 100.0 / (SELECT COUNT(*) FROM peliculas WHERE duracion > 100) AS percentage
+	FROM
+	  peliculas
+48083824R 09852336X ::1(53580) ERROR:  no existe la relación «peliculas» en carácter 51
+48083824R 09852336X ::1(53580) SENTENCIA:  SELECT
+	  COUNT(*) * 100.0 / (SELECT COUNT(*) FROM peliculas WHERE duracion > 100) AS percentage
+	FROM
+	  peliculas.peliculas
+48083824R 09852336X ::1(53580) ERROR:  error de sintaxis en o cerca de «/» en carácter 18
+48083824R 09852336X ::1(53580) SENTENCIA:  SELECT
+	  COUNT * / (SELECT COUNT * FROM peliculas.peliculas WHERE duracion > 100) AS percentage
+	FROM
+	  peliculas.peliculas;
+48083824R 09852336X ::1(53580) ERROR:  error de sintaxis en o cerca de «)» en carácter 1
+48083824R 09852336X ::1(53580) SENTENCIA:  )
+48083824R 09852336X ::1(53580) ERROR:  una cadena de caracteres entre comillas está inconclusa en o cerca de «')» en carácter 1
+48083824R 09852336X ::1(53580) SENTENCIA:  ')
+48083824R 09852336X ::1(53580) ERROR:  no existe la relación «criticas» en carácter 78
+48083824R 09852336X ::1(53580) SENTENCIA:  SELECT codigo_pelicula_peliculas, COUNT(DISTINCT genero) AS num_generos
+	FROM criticas
+	GROUP BY codigo_pelicula_peliculas;
+48083824R 09852336X ::1(53580) ERROR:  no existe la relación «generos» en carácter 78
+48083824R 09852336X ::1(53580) SENTENCIA:  SELECT codigo_pelicula_peliculas, COUNT(DISTINCT genero) AS num_generos
+	FROM generos
+	GROUP BY codigo_pelicula_peliculas;
+48083824R 09852336X ::1(53580) ERROR:  no existe la relación «criticas» en carácter 78
+48083824R 09852336X ::1(53580) SENTENCIA:  SELECT codigo_pelicula_peliculas, COUNT(DISTINCT genero) AS num_generos
+	FROM criticas
+	GROUP BY codigo_pelicula_peliculas
+	HAVING COUNT(DISTINCT genero) > 2;
+48083824R 09852336X ::1(53580) ERROR:  no existe la columna peliculas.idiona en carácter 41
+48083824R 09852336X ::1(53580) HINT:  Probablemente quiera hacer referencia a la columna «peliculas.idioma».
+48083824R 09852336X ::1(53580) SENTENCIA:  SELECT * FROM peliculas.peliculas
+	WHERE peliculas.idiona NOT IN ('EN', 'ES')
+48083824R 09852336X ::1(53580) ERROR:  no existe la columna peliculas.idiona en carácter 41
+48083824R 09852336X ::1(53580) HINT:  Probablemente quiera hacer referencia a la columna «peliculas.idioma».
+48083824R 09852336X ::1(53580) SENTENCIA:  SELECT * FROM peliculas.peliculas
+	WHERE peliculas.peliculas.idiona NOT IN ('EN', 'ES')
+48083824R 09852336X ::1(53580) ERROR:  el operador no existe: numeric = text en carácter 108
+48083824R 09852336X ::1(53580) HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+48083824R 09852336X ::1(53580) SENTENCIA:  SELECT * FROM peliculas.peliculas
+	WHERE 
+	idioma NOT IN ('EN', 'ES')
+	AND duracion > 100
+	AND codigo_director NOT IN (SELECT nombre FROM peliculas.personas WHERE nacionalidad = 'España')
+48083824R 09852336X ::1(53580) ERROR:  el operador no existe: numeric <> text en carácter 108
+48083824R 09852336X ::1(53580) HINT:  Ningún operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+48083824R 09852336X ::1(53580) SENTENCIA:  SELECT * FROM peliculas.peliculas
+	WHERE 
+	idioma NOT IN ('EN', 'ES')
+	AND duracion > 100
+	AND codigo_director != (SELECT nombre FROM peliculas.personas WHERE nacionalidad = 'España')
+48083824R 09852336X ::1(53580) ERROR:  error de sintaxis en o cerca de «NOT» en carácter 108
+48083824R 09852336X ::1(53580) SENTENCIA:  SELECT * FROM peliculas.peliculas
+	WHERE 
+	idioma NOT IN ('EN', 'ES')
+	AND duracion > 100
+	AND codigo_director NOT (SELECT nombre FROM peliculas.personas WHERE nacionalidad = 'España')
+48083824R 09852336X ::1(53580) LOG:  no se pudo enviar datos al cliente: An operation on a socket could not be performed because the system lacked sufficient buffer space or because a queue was full.
+	
+48083824R 09852336X ::1(53580) SENTENCIA:  SELECT peliculas.peliculas.titulo, 
+	       peliculas.peliculas.idioma, 
+	       peliculas.peliculas.duracion, 
+	       peliculas.peliculas.codigo_director,
+	       peliculas.generos.genero, 
+	       peliculas.criticas.puntuacion, 
+	       peliculas.visualizaciones.fecha
+	FROM peliculas.peliculas
+	JOIN peliculas.generos ON peliculas.peliculas.codigo_pelicula = peliculas.generos.codigo_pelicula_peliculas
+	JOIN peliculas.criticas ON peliculas.peliculas.codigo_pelicula = peliculas.criticas.codigo_pelicula_peliculas
+	JOIN peliculas.visualizaciones ON peliculas.peliculas.codigo_pelicula = peliculas.visualizaciones.codigo_pelicula_peliculas
+	
+48083824R 09852336X ::1(53580) FATAL:  se ha perdido la conexión al cliente
+48083824R 09852336X ::1(53580) SENTENCIA:  SELECT peliculas.peliculas.titulo, 
+	       peliculas.peliculas.idioma, 
+	       peliculas.peliculas.duracion, 
+	       peliculas.peliculas.codigo_director,
+	       peliculas.generos.genero, 
+	       peliculas.criticas.puntuacion, 
+	       peliculas.visualizaciones.fecha
+	FROM peliculas.peliculas
+	JOIN peliculas.generos ON peliculas.peliculas.codigo_pelicula = peliculas.generos.codigo_pelicula_peliculas
+	JOIN peliculas.criticas ON peliculas.peliculas.codigo_pelicula = peliculas.criticas.codigo_pelicula_peliculas
+	JOIN peliculas.visualizaciones ON peliculas.peliculas.codigo_pelicula = peliculas.visualizaciones.codigo_pelicula_peliculas
+	
+48083824R 09852336X ::1(61835) LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+48083824R 09852336X ::1(55081) ERROR:  no existe la relación «peliculas.peliculas» en carácter 86
+48083824R 09852336X ::1(55081) SENTENCIA:  SELECT
+	    COUNT(DISTINCT codigo_pelicula) * 100.0 / COUNT(*) AS percentage
+	FROM
+	    peliculas.peliculas
+	    JOIN peliculas.generos ON peliculas.peliculas.codigo_pelicula = peliculas.generos.codigo_pelicula_peliculas
+	    JOIN (
+	        SELECT
+	            codigo_pelicula_peliculas,
+	            COUNT(*) AS num_criticas
+	        FROM
+	            peliculas.criticas
+	        WHERE
+	            puntuacion >= 5
+	        GROUP BY
+	            codigo_pelicula_peliculas
+	        HAVING
+	            COUNT(*) >= 10
+	    ) AS crit ON peliculas.peliculas.codigo_pelicula = crit.codigo_pelicula_peliculas
+	    JOIN peliculas.visualizaciones ON peliculas.peliculas.codigo_pelicula = peliculas.visualizaciones.codigo_pelicula_peliculas
+	    JOIN peliculas.personas ON peliculas.visualizaciones.codigo_personas_personas = peliculas.personas.codigo_personas
+	WHERE
+	    peliculas.peliculas.duracion > 100
+	    AND peliculas.peliculas.idioma NOT IN ('EN', 'ES')
+	    AND peliculas.personas.nacionalidad != 'Espa¤ol'
+	    AND peliculas.visualizaciones.fecha >= '2022-05-01' AND peliculas.visualizaciones.fecha <= '2022-08-31'
+	    AND peliculas.generos.genero IN (
+	        SELECT
+	            genero
+	        FROM
+	            peliculas.generos
+	        GROUP BY
+	            genero
+	        HAVING
+	            COUNT(DISTINCT codigo_pelicula_peliculas) >= 2
+	    );
+48083824R 09852336X ::1(55081) ERROR:  no existe la relación «peliculas.peliculas» en carácter 78
+48083824R 09852336X ::1(55081) SENTENCIA:  SELECT COUNT(DISTINCT codigo_pelicula) * 100.0 / COUNT(*) AS percentage FROM peliculas.peliculas JOIN peliculas.generos ON peliculas.peliculas.codigo_pelicula = peliculas.generos.codigo_pelicula_peliculas JOIN ( SELECT codigo_pelicula_peliculas, COUNT(*) AS num_criticas FROM peliculas.criticas WHERE puntuacion >= 5 GROUP BY codigo_pelicula_peliculas HAVING COUNT(*) >= 10) AS crit ON peliculas.peliculas.codigo_pelicula = crit.codigo_pelicula_peliculas JOIN peliculas.visualizaciones ON peliculas.peliculas.codigo_pelicula = peliculas.visualizaciones.codigo_pelicula_peliculas JOIN peliculas.personas ON peliculas.visualizaciones.codigo_personas_personas = peliculas.personas.codigo_personas WHERE peliculas.peliculas.duracion > 100 AND peliculas.peliculas.idioma NOT IN ('EN', 'ES') AND peliculas.personas.nacionalidad != 'Espa¤ol' AND peliculas.visualizaciones.fecha >= '2022-05-01' AND peliculas.visualizaciones.fecha <= '2022-08-31' AND peliculas.generos.genero IN (SELECT genero FROM peliculas.generos GROUP BY genero HAVING COUNT(DISTINCT codigo_pelicula_peliculas) >= 2);
+48083824R 09852336X ::1(55081) ERROR:  no existe la relación «peliculas.peliculas» en carácter 78
+48083824R 09852336X ::1(55081) SENTENCIA:  SELECT COUNT(DISTINCT codigo_pelicula) * 100.0 / COUNT(*) AS percentage FROM peliculas.peliculas JOIN peliculas.generos ON peliculas.peliculas.codigo_pelicula = peliculas.generos.codigo_pelicula_peliculas JOIN ( SELECT codigo_pelicula_peliculas, COUNT(*) AS num_criticas FROM peliculas.criticas WHERE puntuacion >= 5 GROUP BY codigo_pelicula_peliculas HAVING COUNT(*) >= 10) AS crit ON peliculas.peliculas.codigo_pelicula = crit.codigo_pelicula_peliculas JOIN peliculas.visualizaciones ON peliculas.peliculas.codigo_pelicula = peliculas.visualizaciones.codigo_pelicula_peliculas JOIN peliculas.personas ON peliculas.visualizaciones.codigo_personas_personas = peliculas.personas.codigo_personas WHERE peliculas.peliculas.duracion > 100 AND peliculas.peliculas.idioma NOT IN ('EN', 'ES') AND peliculas.personas.nacionalidad != 'Espa¤ol' AND peliculas.visualizaciones.fecha >= '2022-05-01' AND peliculas.visualizaciones.fecha <= '2022-08-31' AND peliculas.generos.genero IN (SELECT genero FROM peliculas.generos GROUP BY genero HAVING COUNT(DISTINCT codigo_pelicula_peliculas) >= 2);
+48083824R 09852336X ::1(52586) ERROR:  error de sintaxis en o cerca de «EXPLIAN» en carácter 1
+48083824R 09852336X ::1(52586) SENTENCIA:  EXPLIAN
+	EXLAIN
+	EXLAIN
+	SELECT * FROM peliculas;
+48083824R 09852336X ::1(56570) ERROR:  la columna «total.cnt» debe aparecer en la cláusula GROUP BY o ser usada en una función de agregación en carácter 28
+48083824R 09852336X ::1(56570) SENTENCIA:  
+	SELECT COUNT(*) * 100.0 / Total.cnt AS Percentage
+	FROM (
+	    SELECT COUNT(*) AS cnt
+	    FROM peliculas.peliculas P
+	    JOIN peliculas.visualizaciones V ON P.codigo_pelicula = V.codigo_pelicula_peliculas
+	    JOIN peliculas.personas Pe ON V.codigo_personas_personas = Pe.codigo_personas
+	    JOIN peliculas.generos G ON P.codigo_pelicula = G.codigo_pelicula_peliculas
+	    JOIN peliculas.criticas C ON P.codigo_pelicula = C.codigo_pelicula_peliculas
+	    WHERE P.idioma NOT IN ('EN', 'ES')
+	        AND P.duracion > 100
+	        AND Pe.nacionalidad <> 'Español'
+	        AND NOT EXISTS (
+	            SELECT *
+	            FROM peliculas.personas Pe2
+	            WHERE Pe2.nacionalidad = 'Español' AND Pe2.codigo_personas = P.codigo_director
+	        )
+	        AND C.puntuacion >= 5
+	        AND C.fecha BETWEEN '2022-05-01' AND '2022-08-31'
+	    GROUP BY P.codigo_pelicula
+	    HAVING COUNT(DISTINCT G.genero) >= 2
+	) AS Filtered, (SELECT COUNT(*) AS cnt FROM peliculas.peliculas) AS Total
+48083824R 09852336X ::1(56570) ERROR:  no existe la función sum(boolean) en carácter 770
+48083824R 09852336X ::1(56570) HINT:  Ninguna función coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversión explícita de tipos.
+48083824R 09852336X ::1(56570) SENTENCIA:  SELECT COUNT(*)*100.0/(SELECT COUNT(*) FROM peliculas.peliculas) as percentage
+	FROM (
+	    SELECT p.codigo_pelicula
+	    FROM peliculas.peliculas p
+	    JOIN peliculas.visualizaciones v ON p.codigo_pelicula = v.codigo_pelicula_peliculas
+	    JOIN peliculas.personas per ON per.codigo_personas = v.codigo_personas_personas
+	    JOIN peliculas.criticas c ON c.codigo_pelicula_peliculas = p.codigo_pelicula
+	    JOIN peliculas.generos g ON g.codigo_pelicula_peliculas = p.codigo_pelicula
+	    WHERE per.nacionalidad != 'Español'
+	    AND p.duracion > 100
+	    AND p.idioma NOT IN ('EN', 'ES')
+	    AND p.codigo_director NOT IN (SELECT codigo_personas FROM peliculas.personas WHERE nacionalidad = 'Español')
+	    GROUP BY p.codigo_pelicula
+	    HAVING COUNT(DISTINCT g.genero) > 2 AND SUM(c.puntuacion >= 5) >= 10
+	) Total;
+48083824R 09852336X ::1(49219) LOG:  sentencia: CREATE SCHEMA peliculas;
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  ya existe el esquema «peliculas»
+48083824R 09852336X ::1(49219) SENTENCIA:  CREATE SCHEMA peliculas;
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER SCHEMA peliculas OWNER TO postgres;
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: CREATE TABLE peliculas.actua (
+	    codigo_pelicula_peliculas numeric NOT NULL,
+	    codigo_personas_personas numeric
+	);
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  la relación «actua» ya existe
+48083824R 09852336X ::1(49219) SENTENCIA:  CREATE TABLE peliculas.actua (
+	    codigo_pelicula_peliculas numeric NOT NULL,
+	    codigo_personas_personas numeric
+	);
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE peliculas.actua OWNER TO postgres;
+	
+	
+48083824R 09852336X  LOG:  empezando checkpoint: time
+48083824R 09852336X  LOG:  checkpoint completado: se escribi� 7 buffers (0.0%); 0 archivo(s) de WAL a�adido(s), 0 eliminado(s), 0 reciclado(s); escritura=0.772 s, sincronizaci�n=0.009 s, total=0.815 s; archivos sincronizados=7, m�s largo=0.003 s, promedio=0.002 s; distancia=6 kB, estimado=6 kB
+48083824R 09852336X ::1(49219) LOG:  sentencia: CREATE TABLE peliculas.criticas (
+	    puntuacion integer,
+	    texto text,
+	    fecha date NOT NULL,
+	    codigo_pelicula_peliculas numeric NOT NULL,
+	    codigo_personas_personas numeric NOT NULL
+	);
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  la relación «criticas» ya existe
+48083824R 09852336X ::1(49219) SENTENCIA:  CREATE TABLE peliculas.criticas (
+	    puntuacion integer,
+	    texto text,
+	    fecha date NOT NULL,
+	    codigo_pelicula_peliculas numeric NOT NULL,
+	    codigo_personas_personas numeric NOT NULL
+	);
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE peliculas.criticas OWNER TO postgres;
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: COMMENT ON COLUMN peliculas.criticas.puntuacion IS 'Puntuación de la película de 0 a 10';
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: COMMENT ON COLUMN peliculas.criticas.texto IS 'Texto de la crítica';
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: COMMENT ON COLUMN peliculas.criticas.fecha IS 'Fecha de la crítica';
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: CREATE TABLE peliculas.generos (
+	    genero text NOT NULL,
+	    codigo_pelicula_peliculas numeric NOT NULL
+	);
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  la relación «generos» ya existe
+48083824R 09852336X ::1(49219) SENTENCIA:  CREATE TABLE peliculas.generos (
+	    genero text NOT NULL,
+	    codigo_pelicula_peliculas numeric NOT NULL
+	);
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE peliculas.generos OWNER TO postgres;
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: COMMENT ON COLUMN peliculas.generos.genero IS 'Género de la película';
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: CREATE TABLE peliculas.peliculas (
+	    "año" integer,
+	    titulo text,
+	    duracion integer,
+	    idioma character(2),
+	    calificacion text,
+	    codigo_pelicula numeric NOT NULL,
+	    codigo_director numeric
+	);
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  la relación «peliculas» ya existe
+48083824R 09852336X ::1(49219) SENTENCIA:  CREATE TABLE peliculas.peliculas (
+	    "año" integer,
+	    titulo text,
+	    duracion integer,
+	    idioma character(2),
+	    calificacion text,
+	    codigo_pelicula numeric NOT NULL,
+	    codigo_director numeric
+	);
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE peliculas.peliculas OWNER TO postgres;
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: COMMENT ON COLUMN peliculas.peliculas."año" IS 'Año de la película';
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: COMMENT ON COLUMN peliculas.peliculas.titulo IS 'Titulo de la película';
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: COMMENT ON COLUMN peliculas.peliculas.duracion IS 'Duración de la película';
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: COMMENT ON COLUMN peliculas.peliculas.idioma IS 'Idioma de la película, dos caracteres: ES (Español), EN (Inglés), etc';
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: COMMENT ON COLUMN peliculas.peliculas.calificacion IS 'Calificación entre 0 y 10 estrellas';
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: CREATE TABLE peliculas.personas (
+	    nombre text,
+	    nacionalidad text,
+	    "año_nacimiento" date,
+	    codigo_personas numeric NOT NULL
+	);
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  la relación «personas» ya existe
+48083824R 09852336X ::1(49219) SENTENCIA:  CREATE TABLE peliculas.personas (
+	    nombre text,
+	    nacionalidad text,
+	    "año_nacimiento" date,
+	    codigo_personas numeric NOT NULL
+	);
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE peliculas.personas OWNER TO postgres;
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: COMMENT ON COLUMN peliculas.personas.nombre IS 'Nombre de la persona';
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: COMMENT ON COLUMN peliculas.personas.nacionalidad IS 'Nacionalidad de la persona';
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: COMMENT ON COLUMN peliculas.personas."año_nacimiento" IS 'Año de nacimiento';
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: COMMENT ON COLUMN peliculas.personas.codigo_personas IS 'Código de cada persona';
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: CREATE TABLE peliculas.visualizaciones (
+	    fecha date,
+	    codigo_personas_personas numeric,
+	    codigo_pelicula_peliculas numeric
+	);
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  la relación «visualizaciones» ya existe
+48083824R 09852336X ::1(49219) SENTENCIA:  CREATE TABLE peliculas.visualizaciones (
+	    fecha date,
+	    codigo_personas_personas numeric,
+	    codigo_pelicula_peliculas numeric
+	);
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE peliculas.visualizaciones OWNER TO postgres;
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: COMMENT ON COLUMN peliculas.visualizaciones.fecha IS 'Fecha de la visualización de la película';
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  llave duplicada viola restricción de unicidad «criticas_pk»
+48083824R 09852336X ::1(49219) DETALLE:  Ya existe la llave (fecha, codigo_pelicula_peliculas, codigo_personas_personas)=(2022-12-29, 1, 301333).
+48083824R 09852336X ::1(49219) CONTEXTO:  COPY criticas, line 1
+48083824R 09852336X ::1(49219) SENTENCIA:  COPY peliculas.criticas (puntuacion, texto, fecha, codigo_pelicula_peliculas, codigo_personas_personas) FROM stdin;
+	
+48083824R 09852336X ::1(49219) ERROR:  llave duplicada viola restricción de unicidad «generos_pk»
+48083824R 09852336X ::1(49219) DETALLE:  Ya existe la llave (genero, codigo_pelicula_peliculas)=(Genero8, 1).
+48083824R 09852336X ::1(49219) CONTEXTO:  COPY generos, line 1
+48083824R 09852336X ::1(49219) SENTENCIA:  COPY peliculas.generos (genero, codigo_pelicula_peliculas) FROM stdin;
+	
+48083824R 09852336X ::1(49219) ERROR:  llave duplicada viola restricción de unicidad «peliculas_pk»
+48083824R 09852336X ::1(49219) DETALLE:  Ya existe la llave (codigo_pelicula)=(1).
+48083824R 09852336X ::1(49219) CONTEXTO:  COPY peliculas, line 1
+48083824R 09852336X ::1(49219) SENTENCIA:  COPY peliculas.peliculas ("año", titulo, duracion, idioma, calificacion, codigo_pelicula, codigo_director) FROM stdin;
+	
+48083824R 09852336X ::1(49219) ERROR:  llave duplicada viola restricción de unicidad «personal_pk»
+48083824R 09852336X ::1(49219) DETALLE:  Ya existe la llave (codigo_personas)=(1).
+48083824R 09852336X ::1(49219) CONTEXTO:  COPY personas, line 1
+48083824R 09852336X ::1(49219) SENTENCIA:  COPY peliculas.personas (nombre, nacionalidad, "año_nacimiento", codigo_personas) FROM stdin;
+	
+48083824R 09852336X  LOG:  empezando checkpoint: wal
+48083824R 09852336X  LOG:  checkpoint completado: se escribi� 1840 buffers (11.2%); 0 archivo(s) de WAL a�adido(s), 0 eliminado(s), 33 reciclado(s); escritura=269.689 s, sincronizaci�n=0.042 s, total=269.988 s; archivos sincronizados=18, m�s largo=0.007 s, promedio=0.003 s; distancia=538306 kB, estimado=538306 kB
+48083824R 09852336X  LOG:  empezando checkpoint: time
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE ONLY peliculas.actua
+	    ADD CONSTRAINT actua_pk PRIMARY KEY (codigo_pelicula_peliculas);
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  no se permiten múltiples llaves primarias para la tabla «actua»
+48083824R 09852336X ::1(49219) SENTENCIA:  ALTER TABLE ONLY peliculas.actua
+	    ADD CONSTRAINT actua_pk PRIMARY KEY (codigo_pelicula_peliculas);
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE ONLY peliculas.criticas
+	    ADD CONSTRAINT criticas_pk PRIMARY KEY (fecha, codigo_pelicula_peliculas, codigo_personas_personas);
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  no se permiten múltiples llaves primarias para la tabla «criticas»
+48083824R 09852336X ::1(49219) SENTENCIA:  ALTER TABLE ONLY peliculas.criticas
+	    ADD CONSTRAINT criticas_pk PRIMARY KEY (fecha, codigo_pelicula_peliculas, codigo_personas_personas);
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE ONLY peliculas.generos
+	    ADD CONSTRAINT generos_pk PRIMARY KEY (genero, codigo_pelicula_peliculas);
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  no se permiten múltiples llaves primarias para la tabla «generos»
+48083824R 09852336X ::1(49219) SENTENCIA:  ALTER TABLE ONLY peliculas.generos
+	    ADD CONSTRAINT generos_pk PRIMARY KEY (genero, codigo_pelicula_peliculas);
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE ONLY peliculas.peliculas
+	    ADD CONSTRAINT peliculas_pk PRIMARY KEY (codigo_pelicula);
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  no se permiten múltiples llaves primarias para la tabla «peliculas»
+48083824R 09852336X ::1(49219) SENTENCIA:  ALTER TABLE ONLY peliculas.peliculas
+	    ADD CONSTRAINT peliculas_pk PRIMARY KEY (codigo_pelicula);
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE ONLY peliculas.personas
+	    ADD CONSTRAINT personal_pk PRIMARY KEY (codigo_personas);
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  no se permiten múltiples llaves primarias para la tabla «personas»
+48083824R 09852336X ::1(49219) SENTENCIA:  ALTER TABLE ONLY peliculas.personas
+	    ADD CONSTRAINT personal_pk PRIMARY KEY (codigo_personas);
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE ONLY peliculas.actua
+	    ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas) REFERENCES peliculas.peliculas(codigo_pelicula) MATCH FULL ON UPDATE RESTRICT ON DELETE RESTRICT;
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  la restricción «peliculas_fk» para la relación «actua» ya existe
+48083824R 09852336X ::1(49219) SENTENCIA:  ALTER TABLE ONLY peliculas.actua
+	    ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas) REFERENCES peliculas.peliculas(codigo_pelicula) MATCH FULL ON UPDATE RESTRICT ON DELETE RESTRICT;
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE ONLY peliculas.generos
+	    ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas) REFERENCES peliculas.peliculas(codigo_pelicula) MATCH FULL ON UPDATE RESTRICT ON DELETE RESTRICT;
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  la restricción «peliculas_fk» para la relación «generos» ya existe
+48083824R 09852336X ::1(49219) SENTENCIA:  ALTER TABLE ONLY peliculas.generos
+	    ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas) REFERENCES peliculas.peliculas(codigo_pelicula) MATCH FULL ON UPDATE RESTRICT ON DELETE RESTRICT;
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE ONLY peliculas.visualizaciones
+	    ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas) REFERENCES peliculas.peliculas(codigo_pelicula) MATCH FULL ON UPDATE RESTRICT ON DELETE RESTRICT;
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  la restricción «peliculas_fk» para la relación «visualizaciones» ya existe
+48083824R 09852336X ::1(49219) SENTENCIA:  ALTER TABLE ONLY peliculas.visualizaciones
+	    ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas) REFERENCES peliculas.peliculas(codigo_pelicula) MATCH FULL ON UPDATE RESTRICT ON DELETE RESTRICT;
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE ONLY peliculas.criticas
+	    ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas) REFERENCES peliculas.peliculas(codigo_pelicula) MATCH FULL ON UPDATE RESTRICT ON DELETE RESTRICT;
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  la restricción «peliculas_fk» para la relación «criticas» ya existe
+48083824R 09852336X ::1(49219) SENTENCIA:  ALTER TABLE ONLY peliculas.criticas
+	    ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas) REFERENCES peliculas.peliculas(codigo_pelicula) MATCH FULL ON UPDATE RESTRICT ON DELETE RESTRICT;
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE ONLY peliculas.actua
+	    ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas) REFERENCES peliculas.personas(codigo_personas) MATCH FULL ON UPDATE RESTRICT ON DELETE RESTRICT;
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  la restricción «personas_fk» para la relación «actua» ya existe
+48083824R 09852336X ::1(49219) SENTENCIA:  ALTER TABLE ONLY peliculas.actua
+	    ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas) REFERENCES peliculas.personas(codigo_personas) MATCH FULL ON UPDATE RESTRICT ON DELETE RESTRICT;
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE ONLY peliculas.peliculas
+	    ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_director) REFERENCES peliculas.personas(codigo_personas) MATCH FULL ON UPDATE RESTRICT ON DELETE RESTRICT;
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  la restricción «personas_fk» para la relación «peliculas» ya existe
+48083824R 09852336X ::1(49219) SENTENCIA:  ALTER TABLE ONLY peliculas.peliculas
+	    ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_director) REFERENCES peliculas.personas(codigo_personas) MATCH FULL ON UPDATE RESTRICT ON DELETE RESTRICT;
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE ONLY peliculas.visualizaciones
+	    ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas) REFERENCES peliculas.personas(codigo_personas) MATCH FULL ON UPDATE RESTRICT ON DELETE RESTRICT;
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  la restricción «personas_fk» para la relación «visualizaciones» ya existe
+48083824R 09852336X ::1(49219) SENTENCIA:  ALTER TABLE ONLY peliculas.visualizaciones
+	    ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas) REFERENCES peliculas.personas(codigo_personas) MATCH FULL ON UPDATE RESTRICT ON DELETE RESTRICT;
+	
+	
+	
+48083824R 09852336X ::1(49219) LOG:  sentencia: ALTER TABLE ONLY peliculas.criticas
+	    ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas) REFERENCES peliculas.personas(codigo_personas) MATCH FULL ON UPDATE RESTRICT ON DELETE RESTRICT;
+	
+	
+	
+48083824R 09852336X ::1(49219) ERROR:  la restricción «personas_fk» para la relación «criticas» ya existe
+48083824R 09852336X ::1(49219) SENTENCIA:  ALTER TABLE ONLY peliculas.criticas
+	    ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas) REFERENCES peliculas.personas(codigo_personas) MATCH FULL ON UPDATE RESTRICT ON DELETE RESTRICT;
+	
+	
+	
+48083824R 09852336X  LOG:  checkpoint completado: se escribi� 2054 buffers (12.5%); 0 archivo(s) de WAL a�adido(s), 0 eliminado(s), 5 reciclado(s); escritura=257.718 s, sincronizaci�n=0.236 s, total=258.014 s; archivos sincronizados=5, m�s largo=0.226 s, promedio=0.048 s; distancia=79148 kB, estimado=492390 kB
+48083824R 09852336X  LOG:  empezando checkpoint: time
+48083824R 09852336X  LOG:  checkpoint completado: se escribi� 213 buffers (1.3%); 0 archivo(s) de WAL a�adido(s), 0 eliminado(s), 1 reciclado(s); escritura=26.413 s, sincronizaci�n=0.216 s, total=26.673 s; archivos sincronizados=4, m�s largo=0.202 s, promedio=0.054 s; distancia=20863 kB, estimado=445237 kB
+48083824R 09852336X  LOG:  empezando checkpoint: time
+48083824R 09852336X  LOG:  checkpoint completado: se escribi� 9068 buffers (55.3%); 0 archivo(s) de WAL a�adido(s), 0 eliminado(s), 0 reciclado(s); escritura=269.079 s, sincronizaci�n=0.031 s, total=269.129 s; archivos sincronizados=9, m�s largo=0.012 s, promedio=0.004 s; distancia=4389 kB, estimado=401153 kB
+48083824R 09852336X ::1(52586) LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+48083824R 09852336X ::1(51117) LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+48083824R 09852336X ::1(56570) LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+48083824R 09852336X ::1(57768) LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+48083824R 09852336X ::1(59986) LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+48083824R 09852336X ::1(59319) LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+48083824R 09852336X ::1(58945) LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+48083824R 09852336X  LOG:  apagando
+48083824R 09852336X  LOG:  empezando checkpoint: shutdown immediate
+48083824R 09852336X  LOG:  checkpoint completado: se escribi� 0 buffers (0.0%); 0 archivo(s) de WAL a�adido(s), 0 eliminado(s), 0 reciclado(s); escritura=0.001 s, sincronizaci�n=0.001 s, total=0.019 s; archivos sincronizados=0, m�s largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimado=361037 kB

@@ -1,0 +1,54 @@
+48083824R 09852336X  LOG:  el sistema de bases de datos fue apagado en 2023-04-16 15:27:14 CEST
+48083824R 09852336X  LOG:  empezando checkpoint: time
+48083824R 09852336X  LOG:  checkpoint completado: se escribió 3 buffers (0.0%); 0 archivo(s) de WAL añadido(s), 0 eliminado(s), 0 reciclado(s); escritura=0.012 s, sincronización=0.007 s, total=0.039 s; archivos sincronizados=2, más largo=0.004 s, promedio=0.004 s; distancia=0 kB, estimado=0 kB
+48083824R 09852336X ::1(58155) LOG:  sentencia: CREATE TEMP TABLE peliculas_a_borrar AS SELECT codigo_pelicula FROM peliculas.peliculas WHERE RANDOM() <= 0.3;
+48083824R 09852336X  LOG:  empezando checkpoint: time
+48083824R 09852336X  LOG:  checkpoint completado: se escribió 7630 buffers (5.8%); 1 archivo(s) de WAL añadido(s), 7 eliminado(s), 0 reciclado(s); escritura=45.085 s, sincronización=0.384 s, total=45.813 s; archivos sincronizados=28, más largo=0.119 s, promedio=0.014 s; distancia=114030 kB, estimado=114030 kB
+48083824R 09852336X  LOG:  empezando checkpoint: wal
+48083824R 09852336X  LOG:  checkpoint completado: se escribió 101053 buffers (77.1%); 0 archivo(s) de WAL añadido(s), 67 eliminado(s), 0 reciclado(s); escritura=60.388 s, sincronización=96.468 s, total=157.026 s; archivos sincronizados=4, más largo=51.157 s, promedio=24.118 s; distancia=1105114 kB, estimado=1105114 kB
+48083824R 09852336X  LOG:  empezando checkpoint: wal
+48083824R 09852336X  LOG:  checkpoint completado: se escribió 21743 buffers (16.6%); 0 archivo(s) de WAL añadido(s), 89 eliminado(s), 58 reciclado(s); escritura=93.565 s, sincronización=40.763 s, total=134.917 s; archivos sincronizados=9, más largo=35.892 s, promedio=4.530 s; distancia=2395983 kB, estimado=2395983 kB
+48083824R 09852336X  LOG:  empezando checkpoint: wal
+48083824R 09852336X  LOG:  checkpoint completado: se escribió 3339 buffers (2.5%); 0 archivo(s) de WAL añadido(s), 0 eliminado(s), 69 reciclado(s); escritura=269.448 s, sincronización=0.276 s, total=270.104 s; archivos sincronizados=11, más largo=0.238 s, promedio=0.026 s; distancia=1141324 kB, estimado=2270517 kB
+48083824R 09852336X  LOG:  empezando checkpoint: time
+48083824R 09852336X  LOG:  checkpoint completado: se escribió 52 buffers (0.0%); 0 archivo(s) de WAL añadido(s), 0 eliminado(s), 52 reciclado(s); escritura=100.972 s, sincronización=1.936 s, total=103.412 s; archivos sincronizados=6, más largo=1.573 s, promedio=0.323 s; distancia=844667 kB, estimado=2127932 kB
+48083824R 09852336X  LOG:  vacuum automÃ¡tico de la tabla Â«peliculas.peliculas.visualizacionesÂ»: recorridos de Ã­ndice: 0
+	pÃ¡ginas: 0 eliminadas, 256172 quedan, 256172 recorridas (100.00% del total)
+	tuplas: 732739 eliminadas, 28300382 permanecen, 0 estÃ¡n muertas pero aÃºn no se pueden quitar
+	removable cutoff: 1474, which was 1 XIDs old when operation ended
+	recorrido de Ã­ndice no necesario: en 191896 pÃ¡ginas de la tabla (74.91% del total) se eliminaron 12124118 identificadores de elementos muertos
+	tasa lectura promedio: 2.865 MB/s, tasa escritura promedio: 2.094 MB/s
+	uso de bÃºfers: 273498 aciertos, 238955 fallos, 174620 ensuciados
+	uso de WAL: 395130 registros, 165182 imÃ¡genes de pÃ¡gina completa, 866444522 bytes
+	uso de sistema: CPU: usuario: 0.53 s, sistema: 1.04 s, transcurrido: 651.64 s
+48083824R 09852336X  LOG:  empezando checkpoint: time
+48083824R 09852336X  LOG:  checkpoint completado: se escribió 30 buffers (0.0%); 0 archivo(s) de WAL añadido(s), 0 eliminado(s), 41 reciclado(s); escritura=214.537 s, sincronización=0.323 s, total=215.105 s; archivos sincronizados=13, más largo=0.297 s, promedio=0.025 s; distancia=678596 kB, estimado=1982998 kB
+48083824R 09852336X ::1(58401) ERROR:  no existe la relaciÃ³n Â«peliculas_a_borrarÂ» en carÃ¡cter 103
+48083824R 09852336X ::1(58401) SENTENCIA:  EXPLAIN ANALYZE DELETE FROM peliculas.peliculas WHERE codigo_pelicula IN (SELECT codigo_pelicula FROM peliculas_a_borrar);
+48083824R 09852336X ::1(58401) ERROR:  no existe la relaciÃ³n Â«peliculas_a_borrarÂ» en carÃ¡cter 103
+48083824R 09852336X ::1(58401) SENTENCIA:  EXPLAIN ANALYZE DELETE FROM peliculas.peliculas WHERE codigo_pelicula IN (SELECT codigo_pelicula FROM peliculas_a_borrar);
+48083824R 09852336X ::1(58401) LOG:  sentencia: CREATE TEMP TABLE peliculas_a_borrar AS SELECT codigo_pelicula FROM peliculas.peliculas WHERE RANDOM() <= 0.3;
+48083824R 09852336X  LOG:  vacuum automÃ¡tico de la tabla Â«peliculas.peliculas.criticasÂ»: recorridos de Ã­ndice: 1
+	pÃ¡ginas: 0 eliminadas, 168013 quedan, 168013 recorridas (100.00% del total)
+	tuplas: 6050335 eliminadas, 14164045 permanecen, 0 estÃ¡n muertas pero aÃºn no se pueden quitar
+	removable cutoff: 1473, which was 4 XIDs old when operation ended
+	recorrido de Ã­ndice necesario: en 114026 pÃ¡ginas de la tabla (67.87% del total) se eliminaron 6050866 identificadores de elementos muertos
+	Ã­ndice Â«criticas_pkÂ»: pÃ¡ginas: 176924 en total, 0 recientemente eliminadas, 0 eliminadas hasta ahora, 0 reusables
+	tasa lectura promedio: 2.291 MB/s, tasa escritura promedio: 2.796 MB/s
+	uso de bÃºfers: 296116 aciertos, 330978 fallos, 403956 ensuciados
+	uso de WAL: 517933 registros, 403912 imÃ¡genes de pÃ¡gina completa, 1626717628 bytes
+	uso de sistema: CPU: usuario: 1.48 s, sistema: 5.90 s, transcurrido: 1128.87 s
+48083824R 09852336X  LOG:  empezando checkpoint: time
+48083824R 09852336X  LOG:  checkpoint completado: se escribió 3 buffers (0.0%); 0 archivo(s) de WAL añadido(s), 0 eliminado(s), 42 reciclado(s); escritura=0.224 s, sincronización=0.106 s, total=0.602 s; archivos sincronizados=28, más largo=0.037 s, promedio=0.004 s; distancia=681888 kB, estimado=1852887 kB
+48083824R 09852336X ::1(58428) ERROR:  error de sintaxis en o cerca de Â«SETÂ» en carÃ¡cter 31
+48083824R 09852336X ::1(58428) SENTENCIA:  SET search_path TO pelicuolas
+	SET search_path TO peliculas
+	SET search_path TO peliculas;
+48083824R 09852336X ::1(58428) ERROR:  error de sintaxis en o cerca de Â«SELECTÂ» en carÃ¡cter 25
+48083824R 09852336X ::1(58428) SENTENCIA:  SELECT * FROM peliculas
+	SELECT * FROM peliculas
+	SELECT * FROM peliculas;
+48083824R 09852336X ::1(58428) LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+48083824R 09852336X ::1(53937) LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

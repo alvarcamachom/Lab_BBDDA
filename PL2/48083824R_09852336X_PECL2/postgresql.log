@@ -1,0 +1,2530 @@
+2023-01-31 19:35:33.764 CET [1057] LOG:  starting PostgreSQL 14.6 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+2023-01-31 19:35:33.765 CET [1057] LOG:  listening on IPv6 address "::1", port 5432
+2023-01-31 19:35:33.765 CET [1057] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-01-31 19:35:33.766 CET [1057] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2023-01-31 19:35:33.767 CET [1058] LOG:  database system was shut down at 2023-01-31 19:35:33 CET
+2023-01-31 19:35:33.768 CET [1057] LOG:  database system is ready to accept connections
+2023-01-31 19:37:48.416 CET [1179] ERROR:  relation "para" does not exist at character 15
+2023-01-31 19:37:48.416 CET [1179] STATEMENT:  select * from para;
+2023-01-31 19:37:52.581 CET [1057] LOG:  received fast shutdown request
+2023-01-31 19:37:52.581 CET [1057] LOG:  aborting any active transactions
+2023-01-31 19:37:52.582 CET [1057] LOG:  background worker "logical replication launcher" (PID 1064) exited with exit code 1
+2023-01-31 19:37:52.582 CET [1059] LOG:  shutting down
+2023-01-31 19:37:52.588 CET [1057] LOG:  database system is shut down
+48083824R LOG:  starting PostgreSQL 14.6 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+48083824R LOG:  listening on IPv6 address "::1", port 5432
+48083824R LOG:  listening on IPv4 address "127.0.0.1", port 5432
+48083824R LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+48083824R LOG:  database system was shut down at 2023-01-31 19:37:52 CET
+48083824R LOG:  database system is ready to accept connections
+48083824R [local]ERROR:  relation "para" does not exist at character 15
+48083824R [local]STATEMENT:  select * from para;
+48083824R LOG:  received fast shutdown request
+48083824R LOG:  aborting any active transactions
+48083824R LOG:  background worker "logical replication launcher" (PID 1210) exited with exit code 1
+48083824R LOG:  shutting down
+48083824R LOG:  database system is shut down
+2023-01-31 18:39:17.062 GMT [1287] LOG:  syntax error in file "/Users/alvarocamacho/Library/Application Support/Postgres/var-14/postgresql.conf" line 546, near token "%"
+2023-01-31 18:39:17.062 GMT [1287] FATAL:  configuration file "/Users/alvarocamacho/Library/Application Support/Postgres/var-14/postgresql.conf" contains errors
+48083824R LOG:  starting PostgreSQL 14.6 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+48083824R LOG:  listening on IPv6 address "::1", port 5432
+48083824R LOG:  listening on IPv4 address "127.0.0.1", port 5432
+48083824R LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+48083824R LOG:  database system was shut down at 2023-01-31 19:39:15 CET
+48083824R LOG:  database system is ready to accept connections
+48083824R [local]ERROR:  relation "para" does not exist at character 15
+48083824R [local]STATEMENT:  select * from para;
+48083824R [local]LOG:  statement: CREATE DATABASE PL1;
+48083824R [local]LOG:  statement: CREATE TABLE sales (Region text, Country text, Item_Type text, Sales_Channel text, Order_Priority char(1), Order_Date date, Order_ID text PRIMARY KEY, Ship_Date date, Units_Sold integer, Unit_Price double precision, Unit_Cost double precision, Total_Revenue double precision, Total_Cost double precision, Total_Profit double precision);
+48083824R ::1(49610)LOG:  statement: ALTER TABLE public.sales
+	    ALTER COLUMN sales_channel TYPE character varying(7) COLLATE pg_catalog."default";
+	
+	ALTER TABLE public.sales
+	    ALTER COLUMN order_id TYPE character varying(9) COLLATE pg_catalog."default";
+48083824R [local]ERROR:  missing data for column "country"
+48083824R [local]CONTEXT:  COPY sales, line 2: "Sub-Saharan Africa;Togo;Meat;Online;H;20/01/2010;100000001;12/02/2010;5526;421.89;364.69;2331364.14;..."
+48083824R [local]STATEMENT:  COPY sales FROM '/Users/alvarocamacho/Desktop/DatosPL1/sales1.csv' csv header delimiter E'\t' NULL 'NULL' encoding 'UTF8';
+48083824R [local]ERROR:  date/time field value out of range: "20/01/2010"
+48083824R [local]HINT:  Perhaps you need a different "datestyle" setting.
+48083824R [local]CONTEXT:  COPY sales, line 2, column order_date: "20/01/2010"
+48083824R [local]STATEMENT:  COPY sales FROM '/Users/alvarocamacho/Desktop/DatosPL1/sales1.csv' csv header delimiter E';' NULL 'NULL' encoding 'UTF8';
+48083824R [local]ERROR:  date/time field value out of range: "20/01/2010"
+48083824R [local]HINT:  Perhaps you need a different "datestyle" setting.
+48083824R [local]CONTEXT:  COPY sales, line 2, column order_date: "20/01/2010"
+48083824R [local]STATEMENT:  COPY sales FROM '/Users/alvarocamacho/Desktop/DatosPL1/sales1.csv' csv header delimiter ';' NULL 'NULL' encoding 'UTF8';
+48083824R [local]ERROR:  date/time field value out of range: "20/01/2010"
+48083824R [local]HINT:  Perhaps you need a different "datestyle" setting.
+48083824R [local]CONTEXT:  COPY sales, line 2, column order_date: "20/01/2010"
+48083824R [local]STATEMENT:  COPY sales FROM '/Users/alvarocamacho/Desktop/DatosPL1/sales1.csv' csv header delimiter ';' NULL 'NULL' encoding 'UTF8';
+48083824R LOG:  received fast shutdown request
+48083824R LOG:  aborting any active transactions
+48083824R LOG:  background worker "logical replication launcher" (PID 1306) exited with exit code 1
+48083824R LOG:  shutting down
+48083824R LOG:  database system is shut down
+48083824R LOG:  starting PostgreSQL 14.6 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+48083824R LOG:  listening on IPv6 address "::1", port 5432
+48083824R LOG:  listening on IPv4 address "127.0.0.1", port 5432
+48083824R LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+48083824R LOG:  database system was shut down at 2023-02-07 12:47:45 CET
+48083824R LOG:  database system is ready to accept connections
+48083824R [local]ERROR:  syntax error at or near "sales" at character 71
+48083824R [local]STATEMENT:  SELECT pg_relation_filepath('sales’);
+	
+	;
+	SELECT pg_relation_filepath('sales');
+	'
+	)
+	-
+	;
+48083824R [local]ERROR:  column "relid" does not exist at character 50
+48083824R [local]HINT:  Perhaps you meant to reference the column "pg_class.relam" or the column "pg_class.relkind".
+48083824R [local]STATEMENT:  SELECT relname, relpages, pg_total_relation_size(relid) as size
+	FROM pg_class
+	WHERE relkind = 'r'
+	ORDER BY relpages DESC;
+48083824R ::1(50279)ERROR:  syntax error at or near "FROM" at character 372
+48083824R ::1(50279)STATEMENT:  
+	       /* SELECT relname, relpages
+	        FROM pg_class,
+	             (SELECT reltoastrelid
+	              FROM pg_class
+	              WHERE relname = 'sales') AS ss
+	        WHERE oid = ss.reltoastrelid OR
+	              oid = (SELECT indexrelid
+	                     FROM pg_index
+	                     WHERE indrelid = ss.reltoastrelid)
+	        ORDER BY relname;*/
+			
+			 FROM pg_class c, pg_class c2, pg_index i
+	        WHERE c.relname = 'sales' AND
+	              c.oid = i.indrelid AND
+	              c2.oid = i.indexrelid
+	        ORDER BY c2.relname;
+48083824R ::1(51949)ERROR:  column "‘europe’" does not exist at character 135
+48083824R ::1(51949)STATEMENT:  /*SELECT relpages / reltuples AS fr
+	FROM pg_class
+	WHERE relname = 'sales';*/
+	
+	SELECT COUNT (DISTINCT country) FROM sales WHERE region=‘Europe’;
+48083824R ::1(51949)ERROR:  function char_lenght(text) does not exist at character 161
+48083824R ::1(51949)HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+48083824R ::1(51949)STATEMENT:  /*SELECT relpages / reltuples AS fr
+	FROM pg_class
+	WHERE relname = 'sales';*/
+	
+	/*SELECT COUNT (DISTINCT country) FROM sales WHERE region='Europe';*/
+	
+	SELECT avg(char_lenght(region)) FROM sales;
+48083824R ::1(51949)ERROR:  function blksize(unknown) does not exist at character 208
+48083824R ::1(51949)HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+48083824R ::1(51949)STATEMENT:  /*SELECT relpages / reltuples AS fr
+	FROM pg_class
+	WHERE relname = 'sales';*/
+	
+	/*SELECT COUNT (DISTINCT country) FROM sales WHERE region='Europe';*/
+	
+	/*SELECT AVG(char_length(order_id)) FROM sales;*/
+	
+	SELECT blksize('sales');
+	
+48083824R ::1(51949)ERROR:  syntax error at or near "pg_relation_size" at character 201
+48083824R ::1(51949)STATEMENT:  /*SELECT relpages / reltuples AS fr
+	FROM pg_class
+	WHERE relname = 'sales';*/
+	
+	/*SELECT COUNT (DISTINCT country) FROM sales WHERE region='Europe';*/
+	
+	/*SELECT AVG(char_length(order_id)) FROM sales;*/
+	
+	pg_relation_size(reltid)
+	
+48083824R ::1(51949)ERROR:  column "reltid" does not exist at character 225
+48083824R ::1(51949)STATEMENT:  /*SELECT relpages / reltuples AS fr
+	FROM pg_class
+	WHERE relname = 'sales';*/
+	
+	/*SELECT COUNT (DISTINCT country) FROM sales WHERE region='Europe';*/
+	
+	/*SELECT AVG(char_length(order_id)) FROM sales;*/
+	
+	SELECT pg_relation_size(reltid)
+	
+48083824R ::1(51949)ERROR:  relation "public" does not exist at character 225
+48083824R ::1(51949)STATEMENT:  /*SELECT relpages / reltuples AS fr
+	FROM pg_class
+	WHERE relname = 'sales';*/
+	
+	/*SELECT COUNT (DISTINCT country) FROM sales WHERE region='Europe';*/
+	
+	/*SELECT AVG(char_length(order_id)) FROM sales;*/
+	
+	SELECT pg_relation_size('public')
+	
+48083824R LOG:  received fast shutdown request
+48083824R LOG:  aborting any active transactions
+48083824R ::1(53193)FATAL:  terminating connection due to administrator command
+48083824R ::1(53181)FATAL:  terminating connection due to administrator command
+48083824R LOG:  background worker "logical replication launcher" (PID 10003) exited with exit code 1
+48083824R LOG:  shutting down
+48083824R LOG:  database system is shut down
+48083824R LOG:  starting PostgreSQL 14.7 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+48083824R LOG:  listening on IPv6 address "::1", port 5432
+48083824R LOG:  listening on IPv4 address "127.0.0.1", port 5432
+48083824R LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+48083824R LOG:  database system was shut down at 2023-02-15 16:06:19 CET
+48083824R LOG:  database system is ready to accept connections
+48083824R ::1(54307)LOG:  statement: CREATE TABLE sales2 AS
+	SELECT *
+	FROM sales
+	ORDER BY region;
+	
+48083824R ::1(54307)ERROR:  syntax error at or near "PRIMARY" at character 100
+48083824R ::1(54307)STATEMENT:  /*CREATE TABLE sales2 AS
+	SELECT *
+	FROM sales
+	ORDER BY region;*/
+	
+	ALTER TABLE sales2 ADD CONSTRAINT PRIMARY KEY (order_id);
+	
+	
+48083824R ::1(54307)LOG:  statement: /*CREATE TABLE sales2 AS
+	SELECT *
+	FROM sales
+	ORDER BY region;*/
+	
+	ALTER TABLE sales2 ADD CONSTRAINT order_id PRIMARY KEY (order_id);
+	
+	
+48083824R ::1(54307)ERROR:  unterminated quoted string at or near "'sales2’" at character 209
+48083824R ::1(54307)STATEMENT:  /*CREATE TABLE sales2 AS
+	SELECT *
+	FROM sales
+	ORDER BY region;*/
+	
+	--ALTER TABLE sales2 ADD CONSTRAINT order_id PRIMARY KEY (order_id);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'sales2’
+48083824R ::1(54307)ERROR:  syntax error at or near ";" at character 120
+48083824R ::1(54307)STATEMENT:  /*CREATE TABLE sales2 AS
+	SELECT *
+	FROM sales
+	ORDER BY region;*/
+	
+	ALTER TABLE sales2 ADD CONSTRAINT order_id PRIMARY KEY;
+	
+	--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'sales2'
+48083824R ::1(54307)ERROR:  syntax error at end of input at character 205
+48083824R ::1(54307)STATEMENT:  /*CREATE TABLE sales2 AS
+	SELECT *
+	FROM sales
+	ORDER BY region;*/
+	
+	ALTER TABLE sales2 ADD CONSTRAINT order_id PRIMARY KEY
+	
+	--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'sales2'
+48083824R ::1(54307)ERROR:  syntax error at end of input at character 209
+48083824R ::1(54307)STATEMENT:  /*CREATE TABLE sales2 AS
+	SELECT *
+	FROM sales
+	ORDER BY region;*/
+	
+	ALTER TABLE sales2 ADD CONSTRAINT order_id PRIMARY KEY
+	
+	/*--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'sales2'*/
+48083824R ::1(54307)ERROR:  syntax error at or near ";" at character 120
+48083824R ::1(54307)STATEMENT:  /*CREATE TABLE sales2 AS
+	SELECT *
+	FROM sales
+	ORDER BY region;*/
+	
+	ALTER TABLE sales2 ADD CONSTRAINT order_id PRIMARY KEY;
+	
+	/*--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'sales2'*/
+48083824R ::1(54307)ERROR:  syntax error at or near ";" at character 57
+48083824R ::1(54307)STATEMENT:  
+	
+	ALTER TABLE sales2 ADD CONSTRAINT order_id PRIMARY KEY;
+	
+48083824R ::1(54307)ERROR:  syntax error at end of input at character 57
+48083824R ::1(54307)STATEMENT:  
+	
+	ALTER TABLE sales2 ADD CONSTRAINT order_id PRIMARY KEY
+48083824R ::1(54307)ERROR:  unterminated quoted string at or near "'Europe’;" at character 77
+48083824R ::1(54307)STATEMENT:  explain (analyze, buffers)
+	
+	SELECT DISTINCT country FROM sales WHERE region='Europe’;
+48083824R ::1(54307)ERROR:  column "‘europe’" does not exist at character 85
+48083824R ::1(54307)STATEMENT:  explain (analyze, buffers)
+	
+	SELECT COUNT (DISTINCT country) FROM sales WHERE region=‘Europe’;
+48083824R ::1(55498)LOG:  statement: /*DELETE FROM sales WHERE order_id IN (
+	SELECT order_id FROM sales ORDER BY random() LIMIT 1000000
+	)
+	*/
+	
+	CREATE TABLE sales3 AS SELECT * FROM sales ORDER BY region;
+	
+48083824R LOG:  checkpoints are occurring too frequently (18 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R LOG:  checkpoints are occurring too frequently (26 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R LOG:  checkpoints are occurring too frequently (7 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R LOG:  checkpoints are occurring too frequently (8 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R LOG:  checkpoints are occurring too frequently (17 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R LOG:  checkpoints are occurring too frequently (9 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R LOG:  checkpoints are occurring too frequently (17 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R LOG:  checkpoints are occurring too frequently (11 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R LOG:  checkpoints are occurring too frequently (18 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R ::1(55498)ERROR:  syntax error at or near "select" at character 165
+48083824R ::1(55498)STATEMENT:  DELETE FROM sales WHERE order_id IN (
+	SELECT order_id FROM sales ORDER BY random() LIMIT 1000000
+	)
+	
+	
+	--CREATE TABLE sales3 AS SELECT * FROM sales ORDER BY region;
+	
+	select * from sales3;
+48083824R LOG:  checkpoints are occurring too frequently (6 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R LOG:  checkpoints are occurring too frequently (7 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R LOG:  checkpoints are occurring too frequently (6 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R LOG:  checkpoints are occurring too frequently (6 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R LOG:  checkpoints are occurring too frequently (7 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R LOG:  checkpoints are occurring too frequently (8 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R LOG:  checkpoints are occurring too frequently (9 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R ::1(55498)LOG:  statement: /*DELETE FROM sales WHERE order_id IN (
+	SELECT order_id FROM sales ORDER BY random() LIMIT 1000000
+	)*/
+	
+	DROP TABLE sales3;
+	
+	
+	
+48083824R LOG:  checkpoints are occurring too frequently (25 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R ::1(55498)ERROR:  unterminated quoted string at or near "'sales’
+	
+	" at character 178
+48083824R ::1(55498)STATEMENT:  /*DELETE FROM sales WHERE order_id IN (
+	SELECT order_id FROM sales ORDER BY random() LIMIT 1000000
+	)*/
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'sales’
+	
+	
+48083824R ::1(55498)LOG:  statement: /*DELETE FROM sales WHERE order_id IN (
+	SELECT order_id FROM sales ORDER BY random() LIMIT 1000000
+	)*/
+	
+	--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'sales'
+	
+	--select * from sales;
+	
+	--VACUUM (FULL) sales;
+	
+	CREATE TABLE sales3 (Region text, Country text, 
+	Item_Type text, Sales_Channel varchar(7), 
+	Order_Priority char(1), Order_Date date, Order_ID varchar(9), 
+	Ship_Date date, Units_Sold integer, Unit_Price double precision, Unit_Cost double precision, 
+	Total_Revenue double precision, Total_Cost double precision, Total_Profit double precision) 
+	PARTITION BY LIST (region);
+48083824R ::1(55498)ERROR:  unterminated /* comment at or near "/*
+	CREATE TABLE Asia PARTITION OF sales3 FOR VALUES IN ('Asia');
+	CREATE TABLE Asia PARTITION OF sales3 FOR VALUES IN ('Asia');
+	CREATE TABLE Asia PARTITION OF sales3 FOR VALUES IN ('Asia');
+	CREATE TABLE Asia PARTITION OF sales3 FOR VALUES IN ('Asia');
+	CREATE TABLE Asia PARTITION OF sales3 FOR VALUES IN ('Asia');" at character 654
+48083824R ::1(55498)STATEMENT:  /*DELETE FROM sales WHERE order_id IN (
+	SELECT order_id FROM sales ORDER BY random() LIMIT 1000000
+	)*/
+	
+	--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'sales'
+	
+	--select * from sales;
+	
+	--VACUUM (FULL) sales;
+	
+	/*CREATE TABLE sales3 (Region text, Country text, 
+	Item_Type text, Sales_Channel varchar(7), 
+	Order_Priority char(1), Order_Date date, Order_ID varchar(9), 
+	Ship_Date date, Units_Sold integer, Unit_Price double precision, Unit_Cost double precision, 
+	Total_Revenue double precision, Total_Cost double precision, Total_Profit double precision) 
+	PARTITION BY LIST (region);*/
+	
+	SELECT region FROM sales GROUP BY region;
+	/*
+	CREATE TABLE Asia PARTITION OF sales3 FOR VALUES IN ('Asia');
+	CREATE TABLE Asia PARTITION OF sales3 FOR VALUES IN ('Asia');
+	CREATE TABLE Asia PARTITION OF sales3 FOR VALUES IN ('Asia');
+	CREATE TABLE Asia PARTITION OF sales3 FOR VALUES IN ('Asia');
+	CREATE TABLE Asia PARTITION OF sales3 FOR VALUES IN ('Asia');
+48083824R ::1(55498)LOG:  statement: CREATE TABLE Asia PARTITION OF sales3 FOR VALUES IN ('Asia');
+48083824R ::1(55498)LOG:  statement: CREATE TABLE AustraliaOceania PARTITION OF sales3 FOR VALUES IN ('Australia and Oceania');
+48083824R ::1(55498)LOG:  statement: CREATE TABLE CentralAmericaCaribbean PARTITION OF sales3 FOR VALUES IN ('Central America and the Caribbean');
+48083824R ::1(55498)LOG:  statement: CREATE TABLE Europe PARTITION OF sales3 FOR VALUES IN ('Europe');
+48083824R ::1(55498)LOG:  statement: CREATE TABLE MiddleEastNorthAfrica PARTITION OF sales3 FOR VALUES IN ('Middle East and North Africa');
+48083824R ::1(55498)LOG:  statement: CREATE TABLE NorthAmerica PARTITION OF sales3 FOR VALUES IN ('North America');
+48083824R ::1(55498)LOG:  statement: CREATE TABLE SubSaharanAfrica PARTITION OF sales3 FOR VALUES IN ('Sub-Saharan Africa');
+48083824R [local]ERROR:  syntax error at or near ";" at character 99
+48083824R [local]STATEMENT:  COPY sales3 FROM '/Users/alvarocamacho/Desktop/DatosPL1/sales1.csv' csv header delimiter E';' NULL;
+48083824R [local]ERROR:  syntax error at or near "'NULL'" at character 1
+48083824R [local]STATEMENT:  'NULL' encoding 'UTF8';
+48083824R ::1(57265)ERROR:  unterminated quoted string at or near "'sales3’;" at character 74
+48083824R ::1(57265)STATEMENT:  SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'sales3’;
+48083824R ::1(57265)ERROR:  column "count" does not exist at character 103
+48083824R ::1(57265)HINT:  Perhaps you meant to reference the column "sales.country".
+48083824R ::1(57265)STATEMENT:  --SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'subsaharanafrica';
+	select count from sales where region='Europe'
+48083824R ::1(57265)ERROR:  count(*) must be used to call a parameterless aggregate function at character 103
+48083824R ::1(57265)STATEMENT:  --SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'subsaharanafrica';
+	select count() from sales where region='Europe'
+48083824R ::1(57751)ERROR:  column "‘europe’" does not exist at character 58
+48083824R ::1(57751)STATEMENT:  SELECT COUNT (DISTINCT country) FROM sales3 WHERE region=‘Europe’;
+48083824R ::1(57751)ERROR:  syntax error at or near "DROP" at character 18
+48083824R ::1(57751)STATEMENT:  DROP TABLE sales
+	DROP TABLE sales2
+	DROP TABLE sales3
+48083824R ::1(57751)LOG:  statement: DROP TABLE sales;
+	DROP TABLE sales2;
+	DROP TABLE sales3;
+48083824R [local]LOG:  statement: CREATE TABLE sales (Region text, Country text, Item_Type text, Sales_Channel varchar(7), Order_Priority char(1), Order_Date date, Order_ID varchar(9) PRIMARY KEY, Ship_Date date, Units_Sold integer, Unit_Price double precision, Unit_Cost double precision, Total_Revenue double precision, Total_Cost double precision, Total_Profit double precision);
+48083824R [local]ERROR:  could not open file "/Users/alvarocamacho/Desktop/DatosPL1/sales[].csv" for reading: No such file or directory
+48083824R [local]HINT:  COPY FROM instructs the PostgreSQL server process to read a file. You may want a client-side facility such as psql's \copy.
+48083824R [local]STATEMENT:  COPY sales FROM '/Users/alvarocamacho/Desktop/DatosPL1/sales[].csv' csv header delimiter ';' NULL 'NULL' encoding 'UTF8';
+48083824R [local]ERROR:  syntax error at or near "Poniendo" at character 2
+48083824R [local]STATEMENT:  (Poniendo dentro del corchete el numero del archivo (1,2,3,4,5)).
+	;
+48083824R [local]ERROR:  could not open file "/Users/alvarocamacho/Desktop/DatosPL1/sales.csv" for reading: No such file or directory
+48083824R [local]HINT:  COPY FROM instructs the PostgreSQL server process to read a file. You may want a client-side facility such as psql's \copy.
+48083824R [local]STATEMENT:  COPY sales FROM '/Users/alvarocamacho/Desktop/DatosPL1/sales.csv' csv header delimiter ';' NULL 'NULL' encoding 'UTF8';
+48083824R ::1(57751)LOG:  statement: CREATE INDEX order_id ON sales USING gist (order_id);
+	
+48083824R ::1(57751)ERROR:  data type character varying has no default operator class for access method "gist"
+48083824R ::1(57751)HINT:  You must specify an operator class for the index or define a default operator class for the data type.
+48083824R ::1(57751)STATEMENT:  CREATE INDEX order_id ON sales USING gist (order_id);
+	
+48083824R ::1(57751)LOG:  statement: CREATE INDEX order_id_index ON sales (order_id);
+	
+48083824R ::1(57751)ERROR:  syntax error at or near "-" at character 52
+48083824R ::1(57751)STATEMENT:  --CREATE INDEX order_id_index ON sales (order_id);
+	-analyze
+	SELECT pg_size_pretty(pg_total_relation_size('order_id_index'));
+	
+48083824R ::1(57751)ERROR:  unterminated quoted string at or near "'order_id_index’;" at character 202
+48083824R ::1(57751)STATEMENT:  --CREATE INDEX order_id_index ON sales (order_id);
+	--analyze
+	--SELECT pg_size_pretty(pg_total_relation_size('order_id_index'));
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'order_id_index’;
+48083824R ::1(57751)ERROR:  column "name" does not exist at character 228
+48083824R ::1(57751)STATEMENT:  --CREATE INDEX order_id_index ON sales (order_id);
+	--analyze
+	SELECT pg_size_pretty(pg_total_relation_size('order_id_index'));
+	--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'order_id_index';
+	
+	SELECT name, number_of_levels 
+	FROM pg_class, pg_index 
+	WHERE pg_class.oid = pg_index.indexrelid AND pg_class.relname = 'order_id_index';
+	
+48083824R ::1(57751)ERROR:  column "name" does not exist at character 230
+48083824R ::1(57751)STATEMENT:  --CREATE INDEX order_id_index ON sales (order_id);
+	--analyze
+	--SELECT pg_size_pretty(pg_total_relation_size('order_id_index'));
+	--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'order_id_index';
+	
+	SELECT name, number_of_levels 
+	FROM pg_class, pg_index 
+	WHERE pg_class.oid = pg_index.indexrelid AND pg_class.relname = 'order_id_index';
+	
+48083824R ::1(57751)ERROR:  column "number_of_levels" does not exist at character 230
+48083824R ::1(57751)STATEMENT:  --CREATE INDEX order_id_index ON sales (order_id);
+	--analyze
+	--SELECT pg_size_pretty(pg_total_relation_size('order_id_index'));
+	--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'order_id_index';
+	
+	SELECT number_of_levels 
+	FROM pg_class, pg_index 
+	WHERE pg_class.oid = pg_index.indexrelid AND pg_class.relname = 'order_id_index';
+	
+48083824R ::1(57751)ERROR:  column "name" does not exist at character 230
+48083824R ::1(57751)STATEMENT:  --CREATE INDEX order_id_index ON sales (order_id);
+	--analyze
+	--SELECT pg_size_pretty(pg_total_relation_size('order_id_index'));
+	--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'order_id_index';
+	
+	SELECT name, number_of_levels 
+	FROM pg_class, pg_index 
+	WHERE pg_class.oid = pg_index.indexrelid AND pg_class.relname = 'order_id_index';
+	
+48083824R LOG:  received smart shutdown request
+48083824R LOG:  background worker "logical replication launcher" (PID 82384) exited with exit code 1
+48083824R LOG:  shutting down
+48083824R LOG:  database system is shut down
+48083824R LOG:  starting PostgreSQL 14.7 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+48083824R LOG:  listening on IPv6 address "::1", port 5432
+48083824R LOG:  listening on IPv4 address "127.0.0.1", port 5432
+48083824R LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+48083824R LOG:  database system was shut down at 2023-02-23 16:42:30 CET
+48083824R LOG:  database system is ready to accept connections
+48083824R ::1(49306)ERROR:  column "indexname" does not exist at character 69
+48083824R ::1(49306)STATEMENT:  --SELECT pg_relation_filepath('order_id_index');
+	
+	SELECT tablename, indexname, tree_level
+	FROM pg_stats
+	WHERE tablename = 'sales' AND indexname = 'order_id_index';
+	
+48083824R ::1(49306)ERROR:  column "indexname" does not exist at character 58
+48083824R ::1(49306)STATEMENT:  --SELECT pg_relation_filepath('order_id_index');
+	
+	SELECT indexname, indisunique, indisprimary, indisclustered, indnatts, 
+	  pg_get_indexdef(indexrelid) AS indexdef
+	FROM pg_index
+	WHERE indrelid = 'sales'::regclass;
+	
+48083824R ::1(49306)ERROR:  column "indexname" does not exist at character 104
+48083824R ::1(49306)STATEMENT:  --SELECT pg_relation_filepath('order_id_index');
+	
+	SELECT *
+	FROM pg_stats
+	WHERE tablename = 'sales' AND indexname = 'order_id_index';
+	
+	
+48083824R ::1(49306)ERROR:  "order_id_index" is an index at character 65
+48083824R ::1(49306)STATEMENT:  --SELECT pg_relation_filepath('order_id_index');
+	
+	select * from order_id_index;
+48083824R ::1(49306)WARNING:  skipping "order_id_index" --- cannot analyze non-tables or special system tables
+48083824R ::1(50028)ERROR:  function pgstattuple(unknown) does not exist at character 15
+48083824R ::1(50028)HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+48083824R ::1(50028)STATEMENT:  SELECT * FROM pgstattuple('pg_catalog.pg_proc');
+48083824R ::1(50028)ERROR:  syntax error at or near "get_raw_page" at character 52
+48083824R ::1(50028)STATEMENT:  --SELECT * FROM pgstattuple('pg_catalog.pg_proc');
+	get_raw_page(relname text, fork text, blkno bigint) returns bytea
+48083824R ::1(50028)ERROR:  function pgstattuple(unknown) does not exist at character 15
+48083824R ::1(50028)HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+48083824R ::1(50028)STATEMENT:  SELECT * FROM pgstattuple('sales.region');
+	
+48083824R ::1(50028)LOG:  statement: --SELECT * FROM pgstattuple('pg_catalog.pg_proc');
+	CREATE EXTENSION pgstattuple;
+48083824R ::1(50028)ERROR:  schema "sales" does not exist
+48083824R ::1(50028)STATEMENT:  SELECT * FROM pgstattuple('sales.region');
+	--CREATE EXTENSION pgstattuple;
+48083824R ::1(50028)LOG:  statement: --SELECT * FROM pgstattuple('order_id_index');
+	CREATE EXTENSION pageinspect;
+48083824R ::1(50028)LOG:  statement: --SELECT * FROM pgstattuple('order_id_index');
+	CREATE EXTENSION pgstatindex;
+	
+	--SELECT page_checksum(get_raw_page('pg_class', 0), 0);
+	SELECT * FROM bt_metap('order_id_index');
+48083824R ::1(50028)ERROR:  could not open extension control file "/Applications/Postgres.app/Contents/Versions/14/share/postgresql/extension/pgstatindex.control": No such file or directory
+48083824R ::1(50028)STATEMENT:  --SELECT * FROM pgstattuple('order_id_index');
+	CREATE EXTENSION pgstatindex;
+	
+	--SELECT page_checksum(get_raw_page('pg_class', 0), 0);
+	SELECT * FROM bt_metap('order_id_index');
+48083824R ::1(50028)ERROR:  relation "sales" is not a btree index
+48083824R ::1(50028)STATEMENT:  --SELECT * FROM pgstattuple('order_id_index');
+	--CREATE EXTENSION pgstatindex;
+	
+	--SELECT page_checksum(get_raw_page('pg_class', 0), 0);
+	--SELECT * FROM bt_metap('order_id_index');
+	SELECT * FROM pgstatindex('sales');
+48083824R ::1(50028)ERROR:  function pg_block_size(integer) does not exist at character 256
+48083824R ::1(50028)HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+48083824R ::1(50028)STATEMENT:  --SELECT * FROM pgstattuple('order_id_index');
+	--CREATE EXTENSION pgstatindex;
+	
+	--SELECT page_checksum(get_raw_page('pg_class', 0), 0);
+	--SELECT * FROM bt_metap('order_id_index');
+	--SELECT * FROM pgstatindex('order_id_index');
+	SELECT lenght(pointer) FROM pg_block_size(8192)
+48083824R ::1(50028)LOG:  statement: --SELECT * FROM pgstattuple('order_id_index');
+	CREATE EXTENSION pg_block_size;
+	
+	--SELECT page_checksum(get_raw_page('pg_class', 0), 0);
+	--SELECT * FROM bt_metap('order_id_index');
+	--SELECT * FROM pgstatindex('order_id_index');
+	--SELECT lenght(pointer) FROM pg_block_size(8192)
+48083824R ::1(50028)ERROR:  could not open extension control file "/Applications/Postgres.app/Contents/Versions/14/share/postgresql/extension/pg_block_size.control": No such file or directory
+48083824R ::1(50028)STATEMENT:  --SELECT * FROM pgstattuple('order_id_index');
+	CREATE EXTENSION pg_block_size;
+	
+	--SELECT page_checksum(get_raw_page('pg_class', 0), 0);
+	--SELECT * FROM bt_metap('order_id_index');
+	--SELECT * FROM pgstatindex('order_id_index');
+	--SELECT lenght(pointer) FROM pg_block_size(8192)
+48083824R ::1(50028)ERROR:  function pg_block_size(integer) does not exist at character 29
+48083824R ::1(50028)HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+48083824R ::1(50028)STATEMENT:  SELECT lenght(pointer) FROM pg_block_size(8192)
+48083824R LOG:  received smart shutdown request
+48083824R LOG:  background worker "logical replication launcher" (PID 1320) exited with exit code 1
+48083824R LOG:  shutting down
+48083824R LOG:  database system is shut down
+48083824R LOG:  starting PostgreSQL 14.7 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+48083824R LOG:  listening on IPv6 address "::1", port 5432
+48083824R LOG:  listening on IPv4 address "127.0.0.1", port 5432
+48083824R LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+48083824R LOG:  database system was shut down at 2023-03-01 11:54:33 CET
+48083824R LOG:  database system is ready to accept connections
+48083824R ::1(49939)LOG:  statement: CREATE INDEX order_id_index ON sales (units_sold);
+48083824R ::1(49939)ERROR:  relation "order_id_index" already exists
+48083824R ::1(49939)STATEMENT:  CREATE INDEX order_id_index ON sales (units_sold);
+48083824R ::1(49939)LOG:  statement: CREATE INDEX units_sold_index ON sales (units_sold);
+48083824R ::1(49939)ERROR:  syntax error at or near "’" at character 317
+48083824R ::1(49939)STATEMENT:  --CREATE INDEX units_sold_index ON sales (units_sold);
+	--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_index';
+	--SELECT pg_size_pretty(pg_total_relation_size('units_sold_index'));
+	--SELECT pg_relation_filepath('units_sold_index');
+	SELECT * FROM pgstatindex(‘units_sold_index’);’
+48083824R ::1(49939)LOG:  statement: /*--CREATE INDEX units_sold_index ON sales (units_sold);
+	--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_index';
+	--SELECT pg_size_pretty(pg_total_relation_size('units_sold_index'));
+	--SELECT pg_relation_filepath('units_sold_index');
+	--SELECT * FROM pgstatindex('units_sold_index');*/
+	
+	CREATE INDEX order_id_hash_index ON sales USING HASH (order_id);
+48083824R ::1(49939)LOG:  statement: /*--CREATE INDEX units_sold_index ON sales (units_sold);
+	--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_index';
+	--SELECT pg_size_pretty(pg_total_relation_size('units_sold_index'));
+	--SELECT pg_relation_filepath('units_sold_index');
+	--SELECT * FROM pgstatindex('units_sold_index');*/
+	
+	CREATE INDEX order_id_hash_index ON sales USING HASH (order_id);
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'order_id_hash_index';
+	SELECT pg_size_pretty(pg_total_relation_size('order_id_hash_index'));
+48083824R ::1(49939)ERROR:  relation "order_id_hash_index" already exists
+48083824R ::1(49939)STATEMENT:  /*--CREATE INDEX units_sold_index ON sales (units_sold);
+	--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_index';
+	--SELECT pg_size_pretty(pg_total_relation_size('units_sold_index'));
+	--SELECT pg_relation_filepath('units_sold_index');
+	--SELECT * FROM pgstatindex('units_sold_index');*/
+	
+	CREATE INDEX order_id_hash_index ON sales USING HASH (order_id);
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'order_id_hash_index';
+	SELECT pg_size_pretty(pg_total_relation_size('order_id_hash_index'));
+48083824R ::1(49939)ERROR:  function idx_hash_nbucket(oid) does not exist at character 620
+48083824R ::1(49939)HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+48083824R ::1(49939)STATEMENT:  /*--CREATE INDEX units_sold_index ON sales (units_sold);
+	--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_index';
+	--SELECT pg_size_pretty(pg_total_relation_size('units_sold_index'));
+	--SELECT pg_relation_filepath('units_sold_index');
+	--SELECT * FROM pgstatindex('units_sold_index');*/
+	
+	/*CREATE INDEX order_id_hash_index ON sales USING HASH (order_id);
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'order_id_hash_index';
+	SELECT pg_size_pretty(pg_total_relation_size('order_id_hash_index'));
+	SELECT pg_relation_filepath('order_id_hash_index');*/
+	
+	SELECT idx_hash_nbucket(indexrelid)
+	FROM pg_index
+	JOIN pg_class ON pg_index.indexrelid = pg_class.oid
+	WHERE pg_class.relname = 'order_id_hash_index';
+	
+48083824R ::1(49939)ERROR:  function idx_hash_nbucket(regclass) does not exist at character 620
+48083824R ::1(49939)HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+48083824R ::1(49939)STATEMENT:  /*--CREATE INDEX units_sold_index ON sales (units_sold);
+	--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_index';
+	--SELECT pg_size_pretty(pg_total_relation_size('units_sold_index'));
+	--SELECT pg_relation_filepath('units_sold_index');
+	--SELECT * FROM pgstatindex('units_sold_index');*/
+	
+	/*CREATE INDEX order_id_hash_index ON sales USING HASH (order_id);
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'order_id_hash_index';
+	SELECT pg_size_pretty(pg_total_relation_size('order_id_hash_index'));
+	SELECT pg_relation_filepath('order_id_hash_index');*/
+	
+	SELECT idx_hash_nbucket('order_id_hash_index'::regclass);
+	
+	
+48083824R ::1(49939)LOG:  statement: CREATE EXTENSION IF NOT EXISTS pgstattuple;
+48083824R ::1(49939)ERROR:  function idx_hash_nbucket(regclass) does not exist at character 620
+48083824R ::1(49939)HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+48083824R ::1(49939)STATEMENT:  /*--CREATE INDEX units_sold_index ON sales (units_sold);
+	--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_index';
+	--SELECT pg_size_pretty(pg_total_relation_size('units_sold_index'));
+	--SELECT pg_relation_filepath('units_sold_index');
+	--SELECT * FROM pgstatindex('units_sold_index');*/
+	
+	/*CREATE INDEX order_id_hash_index ON sales USING HASH (order_id);
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'order_id_hash_index';
+	SELECT pg_size_pretty(pg_total_relation_size('order_id_hash_index'));
+	SELECT pg_relation_filepath('order_id_hash_index');*/
+	
+	SELECT idx_hash_nbucket('order_id_hash_index'::regclass);
+	
+	
+48083824R ::1(49939)ERROR:  function json_extract_path_text(record, unknown) does not exist at character 715
+48083824R ::1(49939)HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+48083824R ::1(49939)STATEMENT:  /*--CREATE INDEX units_sold_index ON sales (units_sold);
+	--SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_index';
+	--SELECT pg_size_pretty(pg_total_relation_size('units_sold_index'));
+	--SELECT pg_relation_filepath('units_sold_index');
+	--SELECT * FROM pgstatindex('units_sold_index');*/
+	
+	/*CREATE INDEX order_id_hash_index ON sales USING HASH (order_id);
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'order_id_hash_index';
+	SELECT pg_size_pretty(pg_total_relation_size('order_id_hash_index'));
+	SELECT pg_relation_filepath('order_id_hash_index');*/
+	
+	/*select ntuples, maxbucket
+	from hash_metapage_info(get_raw_page('order_id_hash_index',0));*/
+	
+	SELECT json_extract_path_text(stats, 'hash_buckets') AS num_buckets
+	FROM (SELECT pgstatindex('order_id_hash_index') AS stats) AS sub;
+	
+48083824R ::1(50620)LOG:  statement: CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+48083824R ::1(50620)ERROR:  unterminated quoted string at or near "'units_sold_hash_index’);" at character 29
+48083824R ::1(50620)STATEMENT:  SELECT pg_relation_filepath('units_sold_hash_index’);
+48083824R ::1(50620)LOG:  statement: CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');
+48083824R ::1(50620)ERROR:  relation "units_sold_hash_index" already exists
+48083824R ::1(50620)STATEMENT:  CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');
+48083824R ::1(50620)LOG:  statement: CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');
+	
+	explain
+	
+	SELECT * 
+	FROM sales
+	WHERE total_cost= 387072.00
+48083824R ::1(50620)ERROR:  relation "units_sold_hash_index" already exists
+48083824R ::1(50620)STATEMENT:  CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');
+	
+	explain
+	
+	SELECT * 
+	FROM sales
+	WHERE total_cost= 387072.00
+48083824R ::1(50620)ERROR:  syntax error at or near "," at character 349
+48083824R ::1(50620)STATEMENT:  CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');
+	
+	explain
+	
+	SELECT * 
+	FROM sales
+	WHERE total_cost= 387,072.00
+48083824R ::1(50620)ERROR:  syntax error at or near "," at character 8
+48083824R ::1(50620)STATEMENT:  explain, analyze
+	
+	SELECT * 
+	FROM sales
+	WHERE total_cost= 387072.00
+48083824R ::1(50620)ERROR:  syntax error at or near "," at character 305
+48083824R ::1(50620)STATEMENT:  CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');
+	
+	analyze, explain
+	
+	SELECT * 
+	FROM sales
+	WHERE total_cost= 387072.00
+48083824R ::1(50620)ERROR:  syntax error at or near "SELECT" at character 18
+48083824R ::1(50620)STATEMENT:  analyze explain
+	
+	SELECT * 
+	FROM sales
+	WHERE total_cost= 387072.00
+48083824R ::1(50620)ERROR:  syntax error at or near ".00" at character 391
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');*/
+	
+	--explain (analyze, buffers)
+	
+	SELECT count(order_id)
+	FROM sales
+	WHERE total_cost > 32.000.00 and total_cost < 100000.00
+48083824R ::1(50620)ERROR:  column "index_relation_oid" does not exist at character 360
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');*/
+	
+	--explain (analyze, buffers)
+	
+	SELECT * FROM bt_page_stats(index_relation_oid)
+	
+	
+48083824R ::1(50620)ERROR:  column "order_id_index" does not exist at character 360
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');*/
+	
+	--explain (analyze, buffers)
+	
+	SELECT * FROM bt_page_stats(order_id_index)
+	
+	
+48083824R ::1(50620)ERROR:  column "order_id_index" does not exist at character 360
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');*/
+	
+	--explain (analyze, buffers)
+	
+	SELECT * FROM bt_page_stats(order_id_index);
+	
+	
+48083824R ::1(50620)ERROR:  column "units_sold_index" does not exist at character 360
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');*/
+	
+	--explain (analyze, buffers)
+	
+	SELECT * FROM bt_page_stats(units_sold_index);
+	
+	
+48083824R ::1(50620)ERROR:  missing FROM-clause entry for table "sales" at character 360
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');*/
+	
+	--explain (analyze, buffers)
+	
+	SELECT * FROM bt_page_stats(sales.order_id_index);
+	
+	
+48083824R ::1(50620)ERROR:  column "order_id_index" does not exist at character 360
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');*/
+	
+	--explain (analyze, buffers)
+	
+	SELECT * FROM bt_page_stats(order_id_index, 1);
+	
+	
+48083824R ::1(50620)ERROR:  function bt_page_stats(unknown) does not exist at character 346
+48083824R ::1(50620)HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');*/
+	
+	--explain (analyze, buffers)
+	
+	SELECT * FROM bt_page_stats('order_id_index');
+	
+	
+48083824R ::1(50620)ERROR:  relation "order_id_hash_index" is not a btree index
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');*/
+	
+	--explain (analyze, buffers)
+	
+	--SELECT * FROM bt_page_stats('order_id_index', 2);
+	
+	SELECT * FROM pgstatindex('order_id_hash_index');
+48083824R ::1(50620)ERROR:  block number out of range
+48083824R ::1(50620)STATEMENT:  SELECT * FROM bt_page_stats('order_id_index', 19256);
+48083824R ::1(50620)ERROR:  block number out of range
+48083824R ::1(50620)STATEMENT:  SELECT * FROM bt_page_stats('order_id_index', 19255);
+48083824R ::1(50620)ERROR:  relation "sys.dm_db_xtp_hash_index_stats" does not exist at character 641
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');*/
+	
+	--explain (analyze, buffers)
+	
+	--SELECT * FROM bt_page_stats('order_id_index', 5);
+	
+	--SELECT * FROM pgstatindex('order_id_hash_index');
+	
+	SELECT OBJECT_NAME(S.object_id) as sales
+	     , I.name AS order_id_hash_index
+	        , S.total_bucket_count
+	        , S.empty_bucket_count
+	        , S.avg_chain_length
+	        , S.max_chain_length
+	FROM sys.dm_db_xtp_hash_index_stats S
+	JOIN sys.indexes I
+	on S.index_id = I.index_id
+	   AND 
+	   S.object_id = I.object_id;
+48083824R ::1(50620)ERROR:  "order_id_hash_index" is not a btree index
+48083824R ::1(50620)STATEMENT:  SELECT * FROM bt_page_stats('order_id_hash_index', 5);
+	
+48083824R ::1(50620)ERROR:  "order_id_hash_index" is an index at character 474
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');*/
+	
+	--explain (analyze, buffers)
+	
+	--SELECT * FROM bt_page_stats('order_id_hash_index', 5);
+	
+	--SELECT * FROM pgstatindex('order_id_hash_index');
+	
+	SELECT total_bucket_count from order_id_hash_index
+48083824R ::1(50620)ERROR:  "order_id_hash_index" is an index at character 476
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');*/
+	
+	--explain (analyze, buffers)
+	
+	--SELECT * FROM bt_page_stats('order_id_hash_index', 5);
+	
+	--SELECT * FROM pgstatindex('order_id_hash_index');
+	
+	SELECT S.total_bucket_count from order_id_hash_index
+48083824R ::1(50620)ERROR:  "order_id_hash_index" is an index at character 494
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX units_sold_hash_index ON sales USING HASH (units_sold);
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'units_sold_hash_index';
+	
+	SELECT pg_size_pretty(pg_total_relation_size('units_sold_hash_index'));
+	
+	SELECT pg_relation_filepath('units_sold_hash_index');*/
+	
+	--explain (analyze, buffers)
+	
+	--SELECT * FROM bt_page_stats('order_id_hash_index', 5);
+	
+	--SELECT * FROM pgstatindex('order_id_hash_index');
+	
+	SELECT order_id_hash_index.total_bucket_count from order_id_hash_index
+48083824R [local]LOG:  statement: CREATE TABLE sales2 (Region text, Country text, Item_Type text, Sales_Channel varchar(7), Order_Priority char(1), Order_Date date, Order_ID varchar(9) PRIMARY KEY, Ship_Date date, Units_Sold integer, Unit_Price double precision, Unit_Cost double precision, Total_Revenue double precision, Total_Cost double precision, Total_Profit double precision);
+48083824R ::1(50620)LOG:  statement: CREATE INDEX order_id_hash_index ON sales2 USING HASH (order_id);
+48083824R ::1(50620)ERROR:  relation "order_id_hash_index" already exists
+48083824R ::1(50620)STATEMENT:  CREATE INDEX order_id_hash_index ON sales2 USING HASH (order_id);
+48083824R ::1(50620)LOG:  statement: CREATE INDEX order_id_hash_index2 ON sales2 USING HASH (order_id);
+48083824R ::1(50620)LOG:  statement: CREATE INDEX total_cost_hash_index2 ON sales2 USING HASH (total_cost);
+48083824R LOG:  checkpoints are occurring too frequently (14 seconds apart)
+48083824R HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R ::1(50620)LOG:  statement: CREATE INDEX total_cost_index2 ON sales2 (total_cost);
+48083824R ::1(50620)LOG:  statement: /*CREATE INDEX order_id_hash_index2 ON sales2 USING HASH (order_id);
+	CREATE INDEX total_cost_hash_index2 ON sales2 USING HASH (total_cost);
+	CREATE INDEX total_cost_index2 ON sales2 (total_cost);*/
+	
+	CREATE VIEW consulta1 AS
+	SELECT *
+	FROM sales
+	WHERE order_id=‘100565711’
+	
+48083824R ::1(50620)ERROR:  column "‘100565711’" does not exist at character 259
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX order_id_hash_index2 ON sales2 USING HASH (order_id);
+	CREATE INDEX total_cost_hash_index2 ON sales2 USING HASH (total_cost);
+	CREATE INDEX total_cost_index2 ON sales2 (total_cost);*/
+	
+	CREATE VIEW consulta1 AS
+	SELECT *
+	FROM sales
+	WHERE order_id=‘100565711’
+	
+48083824R ::1(50620)LOG:  statement: /*CREATE INDEX order_id_hash_index2 ON sales2 USING HASH (order_id);
+	CREATE INDEX total_cost_hash_index2 ON sales2 USING HASH (total_cost);
+	CREATE INDEX total_cost_index2 ON sales2 (total_cost);*/
+	
+	CREATE VIEW consulta1 AS
+	SELECT *
+	FROM sales
+	WHERE order_id='100565711'
+	
+48083824R ::1(50620)ERROR:  syntax error at or near "SELECT" at character 272
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX order_id_hash_index2 ON sales2 USING HASH (order_id);
+	CREATE INDEX total_cost_hash_index2 ON sales2 USING HASH (total_cost);
+	CREATE INDEX total_cost_index2 ON sales2 (total_cost);*/
+	
+	CREATE VIEW consulta1 AS
+	SELECT *
+	FROM sales
+	WHERE order_id='100565711'
+	
+	SELECT pg_relation_filepath(oid), relpages FROM pg_class WHERE relname = 'consulta1';
+48083824R ::1(50620)ERROR:  syntax error at or near "SELECT" at character 272
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX order_id_hash_index2 ON sales2 USING HASH (order_id);
+	CREATE INDEX total_cost_hash_index2 ON sales2 USING HASH (total_cost);
+	CREATE INDEX total_cost_index2 ON sales2 (total_cost);*/
+	
+	CREATE VIEW consulta1 AS
+	SELECT *
+	FROM sales
+	WHERE order_id='100565711'
+	
+	SELECT relpages FROM pg_class WHERE relname = 'consulta1';
+	
+	SELECT * 
+	FROM sales
+	WHERE order_date like '2022';
+48083824R ::1(50620)ERROR:  operator does not exist: date ~~ unknown at character 39
+48083824R ::1(50620)HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+48083824R ::1(50620)STATEMENT:  SELECT * 
+	FROM sales
+	WHERE order_date like '2022';
+48083824R ::1(50620)ERROR:  syntax error at or near "SELECT" at character 272
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX order_id_hash_index2 ON sales2 USING HASH (order_id);
+	CREATE INDEX total_cost_hash_index2 ON sales2 USING HASH (total_cost);
+	CREATE INDEX total_cost_index2 ON sales2 (total_cost);*/
+	
+	CREATE VIEW consulta1 AS
+	SELECT *
+	FROM sales
+	WHERE order_id='100565711'
+	
+	SELECT relpages FROM pg_class WHERE relname = 'consulta1';
+	
+	SELECT *
+	FROM sales
+	WHERE order_date BETWEEN '2022-01-01' AND '2022-12-31';
+	
+48083824R ::1(50620)ERROR:  syntax error at or near "SELECT" at character 272
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX order_id_hash_index2 ON sales2 USING HASH (order_id);
+	CREATE INDEX total_cost_hash_index2 ON sales2 USING HASH (total_cost);
+	CREATE INDEX total_cost_index2 ON sales2 (total_cost);*/
+	
+	CREATE VIEW consulta1 AS
+	SELECT *
+	FROM sales
+	WHERE order_id='100565711'
+	
+	SELECT relpages FROM pg_class WHERE relname = 'consulta1';
+	
+	
+	SELECT *
+	FROM sales
+	WHERE (order_date BETWEEN '2018-01-01' AND '2018-12-31') AND (order_date BETWEEN '2001-01-01' AND '2001-12-31')
+48083824R ::1(50620)ERROR:  syntax error at or near "SELECT" at character 272
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX order_id_hash_index2 ON sales2 USING HASH (order_id);
+	CREATE INDEX total_cost_hash_index2 ON sales2 USING HASH (total_cost);
+	CREATE INDEX total_cost_index2 ON sales2 (total_cost);*/
+	
+	CREATE VIEW consulta1 AS
+	SELECT *
+	FROM sales
+	WHERE order_id='100565711'
+	
+	SELECT relpages FROM pg_class WHERE relname = 'consulta1';
+	
+	
+	SELECT *
+	FROM sales
+	WHERE (order_date BETWEEN '2018-01-01' AND '2018-12-31') OR (order_date BETWEEN '2001-01-01' AND '2001-12-31')
+48083824R ::1(50620)LOG:  statement: CREATE VIEW query_stats AS
+	SELECT query, calls, total_time, blk_read
+	FROM pg_stat_statements
+	WHERE query <> '<insufficient privilege>';
+48083824R ::1(50620)ERROR:  relation "pg_stat_statements" does not exist at character 75
+48083824R ::1(50620)STATEMENT:  CREATE VIEW query_stats AS
+	SELECT query, calls, total_time, blk_read
+	FROM pg_stat_statements
+	WHERE query <> '<insufficient privilege>';
+48083824R ::1(50620)LOG:  statement: CREATE EXTENSION pg_stat_statements
+48083824R ::1(50620)LOG:  statement: CREATE VIEW query_stats AS
+	SELECT query, calls, total_time, blk_read
+	FROM pg_stat_statements
+	WHERE query <> '<insufficient privilege>';
+48083824R ::1(50620)ERROR:  column "total_time" does not exist at character 49
+48083824R ::1(50620)STATEMENT:  CREATE VIEW query_stats AS
+	SELECT query, calls, total_time, blk_read
+	FROM pg_stat_statements
+	WHERE query <> '<insufficient privilege>';
+48083824R ::1(50620)ERROR:  syntax error at or near "SELECT" at character 272
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX order_id_hash_index2 ON sales2 USING HASH (order_id);
+	CREATE INDEX total_cost_hash_index2 ON sales2 USING HASH (total_cost);
+	CREATE INDEX total_cost_index2 ON sales2 (total_cost);*/
+	
+	CREATE VIEW consulta1 AS
+	SELECT *
+	FROM sales
+	WHERE order_id='100565711'
+	
+	SELECT relpages FROM pg_class WHERE relname = 'consulta1';
+	
+	CREATE EXTENSION pg_stat_statements
+	CREATE VIEW query_stats AS
+	SELECT query, calls, blk_read
+	FROM pg_stat_statements
+	WHERE query <> '<insufficient privilege>';
+	
+	
+	CREATE TABLE sales3 (Region text, Country text, 
+	Item_Type text, Sales_Channel varchar(7), 
+	Order_Priority char(1), Order_Date date, Order_ID varchar(9), 
+	Ship_Date date, Units_Sold integer, Unit_Price double precision, Unit_Cost double precision, 
+	Total_Revenue double precision, Total_Cost double precision, Total_Profit double precision) 
+	
+	PARTITION BY LIST (region);
+	
+	SELECT region FROM sales GROUP BY region;
+	
+	CREATE TABLE [region] PARTITION OF sales3 FOR VALUES IN ([‘region’]);
+	
+	COPY sales3 FROM [ruta] csv header delimiter E';' NULL 'NULL' encoding 'UTF8';
+	
+	--Automáticamente se llenan las tablas de cada región. Lo que hemos hecho ha sido ‘dividir’ la tabla sales3 en 7 tablas diferentes con cada región. 
+48083824R ::1(50620)ERROR:  syntax error at or near "CREATE" at character 37
+48083824R ::1(50620)STATEMENT:  CREATE EXTENSION pg_stat_statements
+	CREATE VIEW query_stats AS
+	SELECT query, calls, blk_read
+	FROM pg_stat_statements
+	WHERE query <> '<insufficient privilege>';
+48083824R ::1(50620)ERROR:  syntax error at or near "CREATE" at character 37
+48083824R ::1(50620)STATEMENT:  CREATE EXTENSION pg_stat_statements
+	CREATE VIEW query_stats AS
+	SELECT query, calls, blk_read
+	FROM pg_stat_statements
+	WHERE query <> '<insufficient privilege>';
+48083824R ::1(50620)LOG:  statement: CREATE VIEW query_stats AS
+	SELECT query, calls, blk_read
+	FROM pg_stat_statements
+	WHERE query <> '<insufficient privilege>';
+48083824R ::1(50620)ERROR:  column "blk_read" does not exist at character 49
+48083824R ::1(50620)STATEMENT:  CREATE VIEW query_stats AS
+	SELECT query, calls, blk_read
+	FROM pg_stat_statements
+	WHERE query <> '<insufficient privilege>';
+48083824R ::1(50620)ERROR:  syntax error at or near "SELECT" at character 272
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX order_id_hash_index2 ON sales2 USING HASH (order_id);
+	CREATE INDEX total_cost_hash_index2 ON sales2 USING HASH (total_cost);
+	CREATE INDEX total_cost_index2 ON sales2 (total_cost);*/
+	
+	CREATE VIEW consulta1 AS
+	SELECT *
+	FROM sales
+	WHERE order_id='100565711'
+	
+	SELECT relpages FROM pg_class WHERE relname = 'consulta1';
+	
+	CREATE EXTENSION pg_stat_statements
+	CREATE VIEW query_stats AS
+	SELECT query, calls, shared_blks_hit
+	FROM pg_stat_statements
+	WHERE query <> '<insufficient privilege>';
+	
+	
+	CREATE TABLE sales3 (Region text, Country text, 
+	Item_Type text, Sales_Channel varchar(7), 
+	Order_Priority char(1), Order_Date date, Order_ID varchar(9), 
+	Ship_Date date, Units_Sold integer, Unit_Price double precision, Unit_Cost double precision, 
+	Total_Revenue double precision, Total_Cost double precision, Total_Profit double precision) 
+	
+	PARTITION BY LIST (region);
+	
+	SELECT region FROM sales GROUP BY region;
+	
+	CREATE TABLE [region] PARTITION OF sales3 FOR VALUES IN ([‘region’]);
+	
+	COPY sales3 FROM [ruta] csv header delimiter E';' NULL 'NULL' encoding 'UTF8';
+	
+	--Automáticamente se llenan las tablas de cada región. Lo que hemos hecho ha sido ‘dividir’ la tabla sales3 en 7 tablas diferentes con cada región. 
+48083824R ::1(50620)LOG:  statement: CREATE VIEW query_stats AS
+	SELECT query, calls, shared_blks_hit
+	FROM pg_stat_statements
+	WHERE query <> '<insufficient privilege>';
+48083824R ::1(50620)ERROR:  syntax error at or near "UPDATE" at character 11
+48083824R ::1(50620)STATEMENT:  CREATE OR UPDATE VIEW query_stats AS
+	SELECT query, calls, shared_blks_hit, shared_blks_read
+	FROM pg_stat_statements
+	WHERE query <> '<insufficient privilege>';
+48083824R ::1(50620)ERROR:  syntax error at or near "SELECT" at character 272
+48083824R ::1(50620)STATEMENT:  /*CREATE INDEX order_id_hash_index2 ON sales2 USING HASH (order_id);
+	CREATE INDEX total_cost_hash_index2 ON sales2 USING HASH (total_cost);
+	CREATE INDEX total_cost_index2 ON sales2 (total_cost);*/
+	
+	CREATE VIEW consulta1 AS
+	SELECT *
+	FROM sales
+	WHERE order_id='100565711'
+	
+	SELECT relpages FROM pg_class WHERE relname = 'consulta1';
+	
+	CREATE EXTENSION pg_stat_statements
+	
+	CREATE VIEW query_stats AS
+	SELECT query, calls, shared_blks_hit, shared_blks_read
+	FROM pg_stat_statements
+	WHERE query <> '<insufficient privilege>';
+	
+	
+	CREATE TABLE sales3 (Region text, Country text, 
+	Item_Type text, Sales_Channel varchar(7), 
+	Order_Priority char(1), Order_Date date, Order_ID varchar(9), 
+	Ship_Date date, Units_Sold integer, Unit_Price double precision, Unit_Cost double precision, 
+	Total_Revenue double precision, Total_Cost double precision, Total_Profit double precision) 
+	
+	PARTITION BY LIST (region);
+	
+	SELECT region FROM sales GROUP BY region;
+	
+	CREATE TABLE [region] PARTITION OF sales3 FOR VALUES IN ([‘region’]);
+	
+	COPY sales3 FROM [ruta] csv header delimiter E';' NULL 'NULL' encoding 'UTF8';
+	
+	--Automáticamente se llenan las tablas de cada región. Lo que hemos hecho ha sido ‘dividir’ la tabla sales3 en 7 tablas diferentes con cada región. 
+48083824R ::1(50620)LOG:  statement: CREATE VIEW query_stats AS
+	SELECT query, calls, shared_blks_hit, shared_blks_read
+	FROM pg_stat_statements
+	WHERE query <> '<insufficient privilege>';
+48083824R ::1(50620)ERROR:  relation "query_stats" already exists
+48083824R ::1(50620)STATEMENT:  CREATE VIEW query_stats AS
+	SELECT query, calls, shared_blks_hit, shared_blks_read
+	FROM pg_stat_statements
+	WHERE query <> '<insufficient privilege>';
+48083824R ::1(50620)LOG:  statement: CREATE OR REPLACE VIEW query_stats AS
+	SELECT query, calls, shared_blks_hit, shared_blks_read
+	FROM pg_stat_statements
+	WHERE query <> '<insufficient privilege>';
+48083824R ::1(50620)ERROR:  invalid input syntax for type boolean: "Oceania" at character 89
+48083824R ::1(50620)STATEMENT:  SELECT count(order_id) 
+	FROM sales
+	WHERE country = 'Mexico' OR region = 'Australia' and 'Oceania';
+48083824R ::1(50620)ERROR:  column "total_time" does not exist at character 68
+48083824R ::1(50620)STATEMENT:  SELECT shared_blks_hit, shared_blks_read FROM query_stats ORDER BY total_time DESC LIMIT 1;
+	
+48083824R ::1(50620)ERROR:  syntax error at or near "DESC" at character 59
+48083824R ::1(50620)STATEMENT:  SELECT shared_blks_hit, shared_blks_read FROM query_stats DESC LIMIT 1;
+	
+48083824R ::1(50620)ERROR:  pg_stat_statements must be loaded via shared_preload_libraries
+48083824R ::1(50620)STATEMENT:  SELECT shared_blks_hit, shared_blks_read FROM query_stats LIMIT 1;
+	
+48083824R ::1(50620)LOG:  statement: CREATE EXTENSION pg_stat_statements
+48083824R ::1(50620)ERROR:  extension "pg_stat_statements" already exists
+48083824R ::1(50620)STATEMENT:  CREATE EXTENSION pg_stat_statements
+48083824R ::1(50620)ERROR:  pg_stat_statements must be loaded via shared_preload_libraries
+48083824R ::1(50620)STATEMENT:  SELECT shared_blks_hit, shared_blks_read FROM query_stats LIMIT 1;
+48083824R ::1(50620)ERROR:  syntax error at or near "SELECT" at character 74
+48083824R ::1(50620)STATEMENT:  CREATE VIEW consulta1 AS
+	SELECT *
+	FROM sales
+	WHERE order_id='100565711'
+	
+	SELECT oid FROM pg_class WHERE relname = 'consulta1';
+	
+	SELECT idx_blks_read FROM pg_stat_all_tables WHERE relname = '16546'
+	
+	
+	
+	
+	
+	
+	
+	CREATE TABLE sales3 (Region text, Country text, 
+	Item_Type text, Sales_Channel varchar(7), 
+	Order_Priority char(1), Order_Date date, Order_ID varchar(9), 
+	Ship_Date date, Units_Sold integer, Unit_Price double precision, Unit_Cost double precision, 
+	Total_Revenue double precision, Total_Cost double precision, Total_Profit double precision) 
+	
+	PARTITION BY LIST (region);
+	
+	SELECT region FROM sales GROUP BY region;
+	
+	CREATE TABLE [region] PARTITION OF sales3 FOR VALUES IN ([‘region’]);
+	
+	COPY sales3 FROM [ruta] csv header delimiter E';' NULL 'NULL' encoding 'UTF8';
+	
+	--Automáticamente se llenan las tablas de cada región. Lo que hemos hecho ha sido ‘dividir’ la tabla sales3 en 7 tablas diferentes con cada región. 
+48083824R ::1(50620)ERROR:  column "idx_blks_read" does not exist at character 8
+48083824R ::1(50620)STATEMENT:  SELECT idx_blks_read FROM pg_stat_all_tables WHERE relname = '16546'
+	
+48083824R ::1(50620)ERROR:  syntax error at or near "SELECT" at character 74
+48083824R ::1(50620)STATEMENT:  CREATE VIEW consulta1 AS
+	SELECT *
+	FROM sales
+	WHERE order_id='100565711'
+	
+	SELECT oid FROM pg_class WHERE relname = 'consulta1';
+	
+	SELECT idx_blks_read FROM pg_statio_all_indexes WHERE relname = 'order_id_index'
+	SELECT idx_blks_read FROM pg_statio_all_tables WHERE relname = '16546'
+	
+	
+	
+	
+	
+	
+	CREATE TABLE sales3 (Region text, Country text, 
+	Item_Type text, Sales_Channel varchar(7), 
+	Order_Priority char(1), Order_Date date, Order_ID varchar(9), 
+	Ship_Date date, Units_Sold integer, Unit_Price double precision, Unit_Cost double precision, 
+	Total_Revenue double precision, Total_Cost double precision, Total_Profit double precision) 
+	
+	PARTITION BY LIST (region);
+	
+	SELECT region FROM sales GROUP BY region;
+	
+	CREATE TABLE [region] PARTITION OF sales3 FOR VALUES IN ([‘region’]);
+	
+	COPY sales3 FROM [ruta] csv header delimiter E';' NULL 'NULL' encoding 'UTF8';
+	
+	--Automáticamente se llenan las tablas de cada región. Lo que hemos hecho ha sido ‘dividir’ la tabla sales3 en 7 tablas diferentes con cada región. 
+48083824R ::1(50620)ERROR:  syntax error at or near "bt_page_stats" at character 1
+48083824R ::1(50620)STATEMENT:  bt_page_stats('units_sold_index',2) 
+48083824R ::1(50620)ERROR:  syntax error at or near "SELECT" at character 117
+48083824R ::1(50620)STATEMENT:  --SABER DATOS DE LAS CONSULTAS CON VISTAS
+	
+	CREATE VIEW consulta1 AS
+	SELECT *
+	FROM sales
+	WHERE order_id='100565711'
+	
+	SELECT oid FROM pg_class WHERE relname = 'consulta1';
+	
+	SELECT idx_blks_read FROM pg_statio_all_indexes WHERE relname = '16546'
+	SELECT idx_blks_read FROM pg_statio_all_tables WHERE relname = '16546'
+	
+	SELECT * FROM sales ORDER BY order_date ASC
+	
+	
+	--TABLA PARTICIONADA POR AÑO
+	
+	CREATE TABLE sales3 (Region text, Country text, 
+	Item_Type text, Sales_Channel varchar(7), 
+	Order_Priority char(1), Order_Date date, Order_ID varchar(9), 
+	Ship_Date date, Units_Sold integer, Unit_Price double precision, Unit_Cost double precision, 
+	Total_Revenue double precision, Total_Cost double precision, Total_Profit double precision) 
+	PARTITION BY LIST (order_date);
+	
+	SELECT order_date FROM sales GROUP BY order_date;
+	
+	CREATE TABLE 2010 PARTITION OF sales3 FOR VALUES IN ([‘region’]);
+	
+	COPY sales3 FROM [ruta] csv header delimiter E';' NULL 'NULL' encoding 'UTF8';
+	
+	--Automáticamente se llenan las tablas de cada región. Lo que hemos hecho ha sido ‘dividir’ la tabla sales3 en 7 tablas diferentes con cada región. 
+	
+	
+	select * from bt_page_stats('units_sold_index',100) 
+48083824R ::1(50620)ERROR:  relation "units_sold" does not exist
+48083824R ::1(50620)STATEMENT:  select * from bt_page_stats('units_sold',100) 
+48083824R ::1(50620)ERROR:  "sales" is not a btree index
+48083824R ::1(50620)STATEMENT:  select * from bt_page_stats('sales',100) 
+48083824R [local]LOG:  statement: CREATE DATABASE autos;
+48083824R [local]LOG:  statement: CREATE TABLE clientes(dni numeric PRIMARY KEY, nombre text, direccion text, telefono numeric);
+48083824R [local]LOG:  statement: CREATE TABLE automoviles(bastidor numeric PRIMARY KEY, proveedor text, modelo text, precio numeric);
+48083824R [local]LOG:  statement: CREATE TABLE compras (
+	   dni_cliente NUMERIC REFERENCES clientes(dni) ON DELETE RESTRICT,
+	   bastidor_auto NUMERIC REFERENCES automoviles(bastidor) ON DELETE RESTRICT,
+	   fecha DATE,
+	   coste NUMERIC,
+	   PRIMARY KEY (bastidor_auto)
+	);
+48083824R LOG:  received smart shutdown request
+48083824R LOG:  background worker "logical replication launcher" (PID 723) exited with exit code 1
+48083824R LOG:  shutting down
+48083824R LOG:  database system is shut down
+48083824R 09852336X LOG:  starting PostgreSQL 14.7 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+48083824R 09852336X LOG:  listening on IPv6 address "::1", port 5432
+48083824R 09852336X LOG:  listening on IPv4 address "127.0.0.1", port 5432
+48083824R 09852336X LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+48083824R 09852336X LOG:  database system was shut down at 2023-03-09 20:57:34 CET
+48083824R 09852336X LOG:  database system is ready to accept connections
+48083824R 09852336X [local]ERROR:  could not open file "/Users/alvarocamacho/Desktop/Datos\ PL2/datos_automoviles.csv" for reading: No such file or directory
+48083824R 09852336X [local]HINT:  COPY FROM instructs the PostgreSQL server process to read a file. You may want a client-side facility such as psql's \copy.
+48083824R 09852336X [local]STATEMENT:  copy automoviles from '/Users/alvarocamacho/Desktop/Datos\ PL2/datos_automoviles.csv' csv header delimiter ',';
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (13 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X [local]ERROR:  insert or update on table "compras" violates foreign key constraint "compras_dni_cliente_fkey"
+48083824R 09852336X [local]DETAIL:  Key (dni_cliente)=(1) is not present in table "clientes".
+48083824R 09852336X [local]STATEMENT:  copy compras from '/Users/alvarocamacho/Desktop/Datos PL2/datos_compras.csv' csv header delimiter ',';
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (10 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X [local]ERROR:  insert or update on table "compras" violates foreign key constraint "compras_dni_cliente_fkey"
+48083824R 09852336X [local]DETAIL:  Key (dni_cliente)=(1) is not present in table "clientes".
+48083824R 09852336X [local]STATEMENT:  copy compras from '/Users/alvarocamacho/Desktop/Datos PL2/datos_compras.csv' csv header delimiter ',';
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (15 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X [local]ERROR:  insert or update on table "compras" violates foreign key constraint "compras_dni_cliente_fkey"
+48083824R 09852336X [local]DETAIL:  Key (dni_cliente)=(1) is not present in table "clientes".
+48083824R 09852336X [local]STATEMENT:  copy compras from '/Users/alvarocamacho/Desktop/Datos PL2/datos_compras.csv' csv delimiter ',';
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (13 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (26 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (8 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (16 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (21 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (24 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X ::1(49481)ERROR:  update or delete on table "clientes" violates foreign key constraint "compras_dni_cliente_fkey" on table "compras"
+48083824R 09852336X ::1(49481)DETAIL:  Key (dni)=(1) is still referenced from table "compras".
+48083824R 09852336X ::1(49481)STATEMENT:  delete from clientes
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (16 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X ::1(49481)ERROR:  update or delete on table "automoviles" violates foreign key constraint "compras_bastidor_auto_fkey" on table "compras"
+48083824R 09852336X ::1(49481)DETAIL:  Key (bastidor)=(1) is still referenced from table "compras".
+48083824R 09852336X ::1(49481)STATEMENT:  delete from automoviles
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (17 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X ::1(49481)ERROR:  canceling statement due to user request
+48083824R 09852336X ::1(49481)CONTEXT:  SQL statement "SELECT 1 FROM ONLY "public"."compras" x WHERE $1 OPERATOR(pg_catalog.=) "dni_cliente" FOR KEY SHARE OF x"
+48083824R 09852336X ::1(49481)STATEMENT:  delete from clientes
+48083824R 09852336X [local]ERROR:  canceling statement due to user request
+48083824R 09852336X [local]CONTEXT:  SQL statement "SELECT 1 FROM ONLY "public"."compras" x WHERE $1 OPERATOR(pg_catalog.=) "dni_cliente" FOR KEY SHARE OF x"
+48083824R 09852336X [local]STATEMENT:  delete from clientes
+	;
+48083824R 09852336X ::1(49481)LOG:  statement: drop table compras
+	
+48083824R 09852336X ::1(49481)LOG:  statement: drop table clientes
+	
+48083824R 09852336X ::1(49481)LOG:  statement: drop table automoviles
+	
+48083824R 09852336X [local]LOG:  statement: CREATE TABLE clientes(dni numeric PRIMARY KEY, nombre text, direccion text, telefono numeric);
+48083824R 09852336X [local]LOG:  statement: CREATE TABLE automoviles(bastidor numeric PRIMARY KEY, proveedor text, modelo text, precio numeric);
+48083824R 09852336X [local]ERROR:  syntax error at or near "end" at character 232
+48083824R 09852336X [local]STATEMENT:  CREATE TABLE compras (
+	   dni_cli NUMERIC REFERENCES clientes(dni) ON DELETE RESTRICT,
+	   bastidor_auto NUMERIC REFERENCES automoviles(bastidor) ON DELETE RESTRICT,
+	   fecha DATE,
+	   coste NUMERIC,
+	   PRIMARY KEY (bastidor_auto)
+	)
+	end
+	/q
+	;
+48083824R 09852336X [local]LOG:  statement: CREATE TABLE compras (
+	   dni_cli NUMERIC REFERENCES clientes(dni) ON DELETE RESTRICT,
+	   bastidor_auto NUMERIC REFERENCES automoviles(bastidor) ON DELETE RESTRICT,
+	   fecha DATE,
+	   coste NUMERIC,
+	   PRIMARY KEY (bastidor_auto)
+	);
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (12 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X ::1(49481)ERROR:  insert or update on table "compras" violates foreign key constraint "compras_dni_cli_fkey"
+48083824R 09852336X ::1(49481)DETAIL:  Key (dni_cli)=(1) is not present in table "clientes".
+48083824R 09852336X ::1(49481)STATEMENT:  copy compras from '/Users/alvarocamacho/Desktop/Datos PL2/datos_compras.csv' csv delimiter ',';
+	
+48083824R 09852336X ::1(49481)ERROR:  canceling statement due to user request
+48083824R 09852336X ::1(49481)CONTEXT:  SQL statement "SELECT 1 FROM ONLY "public"."compras" x WHERE $1 OPERATOR(pg_catalog.=) "dni_cli" FOR KEY SHARE OF x"
+48083824R 09852336X ::1(49481)STATEMENT:  delete from clientes
+48083824R 09852336X ::1(49481)LOG:  statement: drop table clientes
+	
+48083824R 09852336X ::1(49481)ERROR:  cannot drop table clientes because other objects depend on it
+48083824R 09852336X ::1(49481)DETAIL:  constraint compras_dni_cli_fkey on table compras depends on table clientes
+48083824R 09852336X ::1(49481)HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+48083824R 09852336X ::1(49481)STATEMENT:  drop table clientes
+	
+48083824R 09852336X ::1(49481)LOG:  statement: drop table compras
+48083824R 09852336X ::1(49481)ERROR:  syntax error at or near "d" at character 320
+48083824R 09852336X ::1(49481)STATEMENT:  copy automoviles from '/Users/alvarocamacho/Desktop/Datos PL2/datos_automoviles.csv' csv delimiter ',';
+	copy clientes from '/Users/alvarocamacho/Desktop/Datos PL2/datos_clientes.csv' csv delimiter ',';
+	copy compras from '/Users/alvarocamacho/Desktop/Datos PL2/datos_compras.csv' csv delimiter ',';
+	
+	drop table clientes
+	d
+	
+48083824R 09852336X ::1(49481)LOG:  statement: drop table clientes
+48083824R 09852336X [local]LOG:  statement: CREATE TABLE compras (
+	   dni_cli NUMERIC REFERENCES clientes(dni) ON DELETE RESTRICT,
+	   bastidor_auto NUMERIC REFERENCES automoviles(bastidor) ON DELETE RESTRICT,
+	   fecha DATE,
+	   coste NUMERIC,
+	   PRIMARY KEY (bastidor_auto)
+	)
+	;
+48083824R 09852336X [local]ERROR:  relation "clientes" does not exist
+48083824R 09852336X [local]STATEMENT:  CREATE TABLE compras (
+	   dni_cli NUMERIC REFERENCES clientes(dni) ON DELETE RESTRICT,
+	   bastidor_auto NUMERIC REFERENCES automoviles(bastidor) ON DELETE RESTRICT,
+	   fecha DATE,
+	   coste NUMERIC,
+	   PRIMARY KEY (bastidor_auto)
+	)
+	;
+48083824R 09852336X [local]LOG:  statement: CREATE TABLE clientes(dni numeric PRIMARY KEY, nombre text, direccion text, telefono numeric);
+48083824R 09852336X [local]LOG:  statement: CREATE TABLE compras (
+	   dni_cli NUMERIC REFERENCES clientes(dni) ON DELETE RESTRICT,
+	   bastidor_auto NUMERIC REFERENCES automoviles(bastidor) ON DELETE RESTRICT,
+	   fecha DATE,
+	   coste NUMERIC,
+	   PRIMARY KEY (bastidor_auto)
+	);
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (17 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (24 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (27 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X LOG:  received fast shutdown request
+48083824R 09852336X LOG:  aborting any active transactions
+48083824R 09852336X LOG:  background worker "logical replication launcher" (PID 722) exited with exit code 1
+48083824R 09852336X ::1(50506)FATAL:  terminating connection due to administrator command
+48083824R 09852336X ::1(49365)FATAL:  terminating connection due to administrator command
+48083824R 09852336X ::1(49378)FATAL:  terminating connection due to administrator command
+48083824R 09852336X ::1(50549)FATAL:  terminating connection due to administrator command
+48083824R 09852336X ::1(50494)FATAL:  terminating connection due to administrator command
+48083824R 09852336X ::1(49481)FATAL:  terminating connection due to administrator command
+48083824R 09852336X LOG:  shutting down
+48083824R 09852336X LOG:  database system is shut down
+48083824R 09852336X LOG:  starting PostgreSQL 14.7 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+48083824R 09852336X LOG:  listening on IPv6 address "::1", port 5432
+48083824R 09852336X LOG:  listening on IPv4 address "127.0.0.1", port 5432
+48083824R 09852336X LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+48083824R 09852336X LOG:  database system was shut down at 2023-03-14 13:01:52 CET
+48083824R 09852336X LOG:  database system is ready to accept connections
+48083824R 09852336X ::1(50771)LOG:  statement: CREATE TABLE prueba(bastidor numeric PRIMARY KEY, proveedor text, modelo text, precio numeric);
+48083824R 09852336X ::1(50771)LOG:  statement: CREATE TABLE prueba1(dni numeric PRIMARY KEY, nombre text, direccion text, telefono numeric);
+	
+48083824R 09852336X ::1(50771)LOG:  statement: 
+	CREATE TABLE prueba2 (
+	dni_cliente NUMERIC REFERENCES clientes(dni) ON DELETE RESTRICT, bastidor_auto NUMERIC REFERENCES automoviles(bastidor) ON DELETE RESTRICT,  fecha DATE, coste NUMERIC, PRIMARY KEY (bastidor_auto));
+48083824R 09852336X ::1(50771)ERROR:  syntax error at or near "dni_cli" at character 23
+48083824R 09852336X ::1(50771)STATEMENT:  select count distinct dni_cli from compras;
+48083824R 09852336X ::1(50771)ERROR:  syntax error at or near "select" at character 51
+48083824R 09852336X ::1(50771)STATEMENT:  SELECT * FROM pg_stats WHERE tablename='compras'
+	
+	select count distinct dni_cliente from compras;
+48083824R 09852336X ::1(50771)ERROR:  syntax error at or near "dni_cliente" at character 23
+48083824R 09852336X ::1(50771)STATEMENT:  select count distinct dni_cliente from compras;
+48083824R 09852336X ::1(50771)ERROR:  syntax error at or near "dni" at character 23
+48083824R 09852336X ::1(50771)STATEMENT:  select count distinct dni from compras;
+48083824R 09852336X ::1(50771)ERROR:  syntax error at or near "select" at character 51
+48083824R 09852336X ::1(50771)STATEMENT:  SELECT * FROM pg_stats WHERE tablename='compras'
+	
+	select count distinct dni_cli from compras;
+48083824R 09852336X ::1(50771)ERROR:  syntax error at or near "dni_cli" at character 23
+48083824R 09852336X ::1(50771)STATEMENT:  select count distinct dni_cli from compras;
+48083824R 09852336X ::1(50771)ERROR:  syntax error at or near "(" at character 23
+48083824R 09852336X ::1(50771)STATEMENT:  select count distinct (dni_cli) from compras;
+48083824R 09852336X ::1(50771)ERROR:  syntax error at or near "(" at character 75
+48083824R 09852336X ::1(50771)STATEMENT:  --SELECT * FROM pg_stats WHERE tablename='compras'
+	
+	select count distinct (dni_cli) from compras;
+48083824R 09852336X ::1(53876)ERROR:  column "compras" does not exist at character 42
+48083824R 09852336X ::1(53876)STATEMENT:  SELECT * FROM pg_stats WHERE tablename = compras;
+48083824R 09852336X ::1(53876)ERROR:  column "dni" does not exist at character 15
+48083824R 09852336X ::1(53876)STATEMENT:  select count (dni) from compras
+48083824R 09852336X ::1(53876)LOG:  statement: alter system set default_statistics_target = 1000
+48083824R 09852336X ::1(53876)LOG:  statement: alter system set default_statistics_target = 100
+48083824R 09852336X ::1(53876)ERROR:  column compras.bastidor does not exist at character 63
+48083824R 09852336X ::1(53876)STATEMENT:  SELECT COUNT(*) 
+	FROM compras
+	LEFT OUTER JOIN automoviles 
+	ON compras.bastidor = automoviles.bastidor
+	WHERE proveedor = 'proveedor500' and dni_cli IS NULL
+	
+48083824R 09852336X ::1(57430)LOG:  could not send data to client: Broken pipe
+48083824R 09852336X ::1(57430)STATEMENT:  /*EXPLAIN
+	SELECT COUNT(*)
+	FROM automoviles
+	WHERE proveedor = 'proveedor500'
+	AND NOT EXISTS (SELECT * FROM compras WHERE compras.bastidor_auto = automoviles.bastidor);*/
+	
+	SELECT automoviles.modelo
+	FROM automoviles
+	NATURAL JOIN compras
+	WHERE precio>50000 and EXTRACT(month FROM fecha) = 5;
+48083824R 09852336X ::1(57430)FATAL:  connection to client lost
+48083824R 09852336X ::1(57430)STATEMENT:  /*EXPLAIN
+	SELECT COUNT(*)
+	FROM automoviles
+	WHERE proveedor = 'proveedor500'
+	AND NOT EXISTS (SELECT * FROM compras WHERE compras.bastidor_auto = automoviles.bastidor);*/
+	
+	SELECT automoviles.modelo
+	FROM automoviles
+	NATURAL JOIN compras
+	WHERE precio>50000 and EXTRACT(month FROM fecha) = 5;
+48083824R 09852336X LOG:  received fast shutdown request
+48083824R 09852336X LOG:  aborting any active transactions
+48083824R 09852336X LOG:  background worker "logical replication launcher" (PID 24492) exited with exit code 1
+48083824R 09852336X LOG:  shutting down
+48083824R 09852336X LOG:  database system is shut down
+48083824R 09852336X LOG:  starting PostgreSQL 14.7 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+48083824R 09852336X LOG:  listening on IPv6 address "::1", port 5432
+48083824R 09852336X LOG:  listening on IPv4 address "127.0.0.1", port 5432
+48083824R 09852336X LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+48083824R 09852336X LOG:  database system was shut down at 2023-03-28 12:49:57 CEST
+48083824R 09852336X LOG:  database system is ready to accept connections
+48083824R 09852336X ::1(58106)LOG:  could not send data to client: Broken pipe
+48083824R 09852336X ::1(58106)STATEMENT:  SELECT automoviles.modelo
+	FROM automoviles
+	NATURAL JOIN compras
+	WHERE precio>50000 and EXTRACT(month FROM fecha) = 5;
+48083824R 09852336X ::1(58106)FATAL:  connection to client lost
+48083824R 09852336X ::1(58106)STATEMENT:  SELECT automoviles.modelo
+	FROM automoviles
+	NATURAL JOIN compras
+	WHERE precio>50000 and EXTRACT(month FROM fecha) = 5;
+48083824R 09852336X LOG:  received fast shutdown request
+48083824R 09852336X LOG:  aborting any active transactions
+48083824R 09852336X LOG:  background worker "logical replication launcher" (PID 18977) exited with exit code 1
+48083824R 09852336X LOG:  shutting down
+48083824R 09852336X LOG:  database system is shut down
+48083824R 09852336X LOG:  starting PostgreSQL 14.7 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+48083824R 09852336X LOG:  listening on IPv6 address "::1", port 5432
+48083824R 09852336X LOG:  listening on IPv4 address "127.0.0.1", port 5432
+48083824R 09852336X LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+48083824R 09852336X LOG:  database system was shut down at 2023-03-28 13:01:50 CEST
+48083824R 09852336X LOG:  database system is ready to accept connections
+48083824R 09852336X ::1(58276)ERROR:  syntax error at or near "ORDER" at character 180
+48083824R 09852336X ::1(58276)STATEMENT:  SELECT automoviles.modelo, compras.fecha
+	FROM automoviles
+	INNER JOIN compras on automoviles.bastidor = compras.bastidor_auto
+	WHERE precio>50000 and EXTRACT(month FROM fecha) = 5;
+	ORDER BY fecha DESC
+48083824R 09852336X ::1(58276)ERROR:  syntax error at or near "'2023-05-01'" at character 157
+48083824R 09852336X ::1(58276)STATEMENT:  SELECT automoviles.modelo, compras.fecha
+	FROM automoviles
+	INNER JOIN compras on automoviles.bastidor = compras.bastidor_auto
+	WHERE precio>50000 and BETWEEN '2023-05-01' AND '2023-05-31';
+	
+48083824R 09852336X ::1(58276)ERROR:  syntax error at or near "'2023/05/01'" at character 157
+48083824R 09852336X ::1(58276)STATEMENT:  SELECT automoviles.modelo, compras.fecha
+	FROM automoviles
+	INNER JOIN compras on automoviles.bastidor = compras.bastidor_auto
+	WHERE precio>50000 and BETWEEN '2023/05/01' AND '2023/05/31';
+	
+48083824R 09852336X ::1(58276)ERROR:  syntax error at or near "'2022-05-01'" at character 157
+48083824R 09852336X ::1(58276)STATEMENT:  SELECT automoviles.modelo, compras.fecha
+	FROM automoviles
+	INNER JOIN compras on automoviles.bastidor = compras.bastidor_auto
+	WHERE precio>50000 and BETWEEN '2022-05-01' AND '2022-05-31';
+	
+48083824R 09852336X ::1(58276)ERROR:  column "‘proovedor300’" does not exist at character 443
+48083824R 09852336X ::1(58276)STATEMENT:  /*EXPLAIN
+	SELECT automoviles.modelo
+	FROM automoviles
+	INNER JOIN compras on automoviles.bastidor = compras.bastidor_auto
+	WHERE precio>50000 and fecha BETWEEN '2022-05-01' AND '2022-05-31';
+	*/
+	SELECT automoviles.modelo
+	FROM automoviles
+	INNER JOIN compras on automoviles.bastidor = compras.bastidor_auto 
+	INNER JOIN clientes on compras.dni_cli = clientes.dni
+	WHERE compras.fecha BETWEEN '2022-02-01' AND '2022-08-30' AND 
+	(automoviles.proveedor=‘proovedor300’ OR automoviles.proovedor=‘proovedor500’) 
+	AND clientes.telefono BETWEEN 7000000 AND 9000000;
+48083824R 09852336X ::1(58276)ERROR:  column compras.bastidor does not exist at character 670
+48083824R 09852336X ::1(58276)STATEMENT:  /*EXPLAIN
+	SELECT automoviles.modelo
+	FROM automoviles
+	INNER JOIN compras on automoviles.bastidor = compras.bastidor_auto
+	WHERE precio>50000 and fecha BETWEEN '2022-05-01' AND '2022-05-31';
+	*/
+	/*
+	EXPLAIN
+	SELECT automoviles.modelo
+	FROM automoviles
+	INNER JOIN compras on automoviles.bastidor = compras.bastidor_auto 
+	INNER JOIN clientes on compras.dni_cli = clientes.dni
+	WHERE (compras.fecha BETWEEN '2022-02-01' AND '2022-08-30') AND 
+	(automoviles.proveedor='proveedor300' OR automoviles.proveedor='proveedor500') 
+	AND (clientes.telefono BETWEEN 70000000 AND 90000000);
+	*/
+	
+	SELECT COUNT(automoviles.bastidor)
+	FROM automoviles 
+	LEFT JOIN compras 
+	ON automoviles.bastidor = compras.bastidor
+	WHERE automoviles.proveedor = 'proveedor500' AND compras.bastidor IS NULL;
+	
+	
+48083824R 09852336X [local]LOG:  statement: CREATE DATABASE peliculas;
+48083824R 09852336X [local]WARNING:  there is no transaction in progress
+48083824R 09852336X [local]LOG:  statement: CREATE SCHEMA peliculas;
+48083824R 09852336X [local]LOG:  statement: ALTER SCHEMA peliculas OWNER TO postgres;
+48083824R 09852336X [local]LOG:  statement: CREATE TABLE peliculas.personas (
+	nombre text,
+	nacionalidad text,
+	"año_nacimiento" date,
+	codigo_personas numeric NOT NULL,
+	CONSTRAINT personal_pk PRIMARY KEY (codigo_personas)
+	);
+48083824R 09852336X [local]LOG:  statement: COMMENT ON COLUMN peliculas.personas.nombre IS E'Nombre de la persona';
+48083824R 09852336X [local]LOG:  statement: COMMENT ON COLUMN peliculas.personas.nacionalidad IS E'Nacionalidad de la persona';
+48083824R 09852336X [local]LOG:  statement: COMMENT ON COLUMN peliculas.personas."año_nacimiento" IS E'Año de nacimiento';
+48083824R 09852336X [local]LOG:  statement: COMMENT ON COLUMN peliculas.personas.codigo_personas IS E'Código de cada persona';
+48083824R 09852336X [local]LOG:  statement: ALTER TABLE peliculas.personas OWNER TO postgres;
+48083824R 09852336X [local]LOG:  statement: CREATE TABLE peliculas.peliculas (
+	"año" integer,
+	titulo text,
+	duracion integer,
+	idioma char(2),
+	calificacion text,
+	codigo_pelicula numeric NOT NULL,
+	codigo_director numeric,
+	CONSTRAINT peliculas_pk PRIMARY KEY (codigo_pelicula)
+	);
+48083824R 09852336X [local]LOG:  statement: COMMENT ON COLUMN peliculas.peliculas."año" IS E'Año de la película';
+48083824R 09852336X [local]LOG:  statement: COMMENT ON COLUMN peliculas.peliculas.titulo IS E'Titulo de la película';
+48083824R 09852336X [local]LOG:  statement: COMMENT ON COLUMN peliculas.peliculas.duracion IS E'Duración de la película';
+48083824R 09852336X [local]LOG:  statement: COMMENT ON COLUMN peliculas.peliculas.idioma IS E'Idioma de la película, dos caracteres: ES (Español), EN (Inglés), etc';
+48083824R 09852336X [local]LOG:  statement: COMMENT ON COLUMN peliculas.peliculas.calificacion IS E'Calificación entre 0 y 10 estrellas';
+48083824R 09852336X [local]LOG:  statement: ALTER TABLE peliculas.peliculas OWNER TO postgres;
+48083824R 09852336X [local]LOG:  statement: CREATE TABLE peliculas.actua (
+	codigo_pelicula_peliculas numeric NOT NULL,
+	codigo_personas_personas numeric,
+	CONSTRAINT actua_pk PRIMARY KEY (codigo_pelicula_peliculas)
+	);
+48083824R 09852336X [local]LOG:  statement: ALTER TABLE peliculas.actua ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas)
+	REFERENCES peliculas.peliculas (codigo_pelicula) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+48083824R 09852336X [local]LOG:  statement: CREATE TABLE peliculas.generos (
+	genero text NOT NULL,
+	codigo_pelicula_peliculas numeric NOT NULL,
+	CONSTRAINT generos_pk PRIMARY KEY (genero,codigo_pelicula_peliculas)
+	);
+48083824R 09852336X [local]LOG:  statement: COMMENT ON COLUMN peliculas.generos.genero IS E'Género de la película';
+48083824R 09852336X [local]LOG:  statement: ALTER TABLE peliculas.generos OWNER TO postgres;
+48083824R 09852336X [local]LOG:  statement: ALTER TABLE peliculas.generos ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas)
+	REFERENCES peliculas.peliculas (codigo_pelicula) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+48083824R 09852336X [local]LOG:  statement: CREATE TABLE peliculas.criticas (
+	puntuacion integer,
+	texto text,
+	fecha date NOT NULL,
+	codigo_pelicula_peliculas numeric NOT NULL,
+	codigo_personas_personas numeric NOT NULL,
+	CONSTRAINT criticas_pk PRIMARY KEY (fecha,codigo_pelicula_peliculas,codigo_personas_personas)
+	);
+48083824R 09852336X [local]LOG:  statement: COMMENT ON COLUMN peliculas.criticas.puntuacion IS E'Puntuación de la película de 0 a 10';
+48083824R 09852336X [local]LOG:  statement: COMMENT ON COLUMN peliculas.criticas.texto IS E'Texto de la crítica';
+48083824R 09852336X [local]LOG:  statement: COMMENT ON COLUMN peliculas.criticas.fecha IS E'Fecha de la crítica';
+48083824R 09852336X [local]LOG:  statement: ALTER TABLE peliculas.criticas OWNER TO postgres;
+48083824R 09852336X [local]LOG:  statement: ALTER TABLE peliculas.actua ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas)
+	REFERENCES peliculas.personas (codigo_personas) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+48083824R 09852336X [local]LOG:  statement: ALTER TABLE peliculas.peliculas ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_director)
+	REFERENCES peliculas.personas (codigo_personas) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+48083824R 09852336X [local]LOG:  statement: CREATE TABLE peliculas.visualizaciones (
+	fecha date,
+	codigo_personas_personas numeric,
+	codigo_pelicula_peliculas numeric
+	);
+48083824R 09852336X [local]LOG:  statement: COMMENT ON COLUMN peliculas.visualizaciones.fecha IS E'Fecha de la visualización de la película';
+48083824R 09852336X [local]LOG:  statement: ALTER TABLE peliculas.visualizaciones OWNER TO postgres;
+48083824R 09852336X [local]LOG:  statement: ALTER TABLE peliculas.visualizaciones ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas)
+	REFERENCES peliculas.personas (codigo_personas) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+48083824R 09852336X [local]LOG:  statement: ALTER TABLE peliculas.visualizaciones ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas)
+	REFERENCES peliculas.peliculas (codigo_pelicula) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+48083824R 09852336X [local]LOG:  statement: ALTER TABLE peliculas.criticas ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas)
+	REFERENCES peliculas.peliculas (codigo_pelicula) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+48083824R 09852336X [local]LOG:  statement: ALTER TABLE peliculas.criticas ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas)
+	REFERENCES peliculas.personas (codigo_personas) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+48083824R 09852336X [local]ERROR:  relation "generos" does not exist
+48083824R 09852336X [local]STATEMENT:  copy generos from '/Users/alvarocamacho/generosRandom.txt';
+48083824R 09852336X [local]ERROR:  missing data for column "codigo_pelicula_peliculas"
+48083824R 09852336X [local]CONTEXT:  COPY generos, line 1: "Genero20"
+48083824R 09852336X [local]STATEMENT:  copy peliculas.generos from '/Users/alvarocamacho/generosRandom.txt';
+48083824R 09852336X ::1(58276)ERROR:  schema "peliculas" does not exist
+48083824R 09852336X ::1(58276)STATEMENT:  copy peliculas.generos from '/Users/alvarocamacho/generosRandom.txt';
+	
+48083824R 09852336X ::1(53118)ERROR:  missing data for column "codigo_pelicula_peliculas"
+48083824R 09852336X ::1(53118)CONTEXT:  COPY generos, line 1: "Genero20"
+48083824R 09852336X ::1(53118)STATEMENT:  copy peliculas.generos from '/Users/alvarocamacho/generosRandom.txt';
+48083824R 09852336X ::1(53161)LOG:  could not receive data from client: Connection reset by peer
+48083824R 09852336X ::1(53287)ERROR:  schema "visualizaciones" does not exist
+48083824R 09852336X ::1(53287)STATEMENT:  copy visualizaciones.generos from '/Users/alvarocamacho/visualizacionesRandom.csv' csv header delimiter ',';
+48083824R 09852336X ::1(53287)ERROR:  missing data for column "codigo_personas_personas"
+48083824R 09852336X ::1(53287)CONTEXT:  COPY visualizaciones, line 2: "23/6/2022"
+48083824R 09852336X ::1(53287)STATEMENT:  copy peliculas.visualizaciones from '/Users/alvarocamacho/visualizacionesRandom.csv' csv header delimiter ',';
+48083824R 09852336X ::1(53287)ERROR:  missing data for column "codigo_pelicula"
+48083824R 09852336X ::1(53287)CONTEXT:  COPY peliculas, line 2: "1,Titulo39,1971,NL,3"
+48083824R 09852336X ::1(53287)STATEMENT:  copy peliculas.peliculas from '/Users/alvarocamacho/peliculasRandom.csv' csv header delimiter ',';
+48083824R 09852336X ::1(53287)ERROR:  invalid input syntax for type date: "1980"
+48083824R 09852336X ::1(53287)CONTEXT:  COPY personas, line 2, column año_nacimiento: "1980"
+48083824R 09852336X ::1(53287)STATEMENT:  copy peliculas.personas from '/Users/alvarocamacho/personasRandom.csv' csv header delimiter ',';
+48083824R 09852336X ::1(53287)ERROR:  invalid input syntax for type integer: "8/5/2022"
+48083824R 09852336X ::1(53287)CONTEXT:  COPY criticas, line 2, column puntuacion: "8/5/2022"
+48083824R 09852336X ::1(53287)STATEMENT:  copy peliculas.criticas from '/Users/alvarocamacho/criticasRandom.csv' csv header delimiter ',';
+48083824R 09852336X ::1(53287)ERROR:  missing data for column "codigo_personas_personas"
+48083824R 09852336X ::1(53287)CONTEXT:  COPY visualizaciones, line 2: "23/6/2022"
+48083824R 09852336X ::1(53287)STATEMENT:  copy peliculas.visualizaciones from '/Users/alvarocamacho/visualizacionesRandom.csv' csv header delimiter ',';
+48083824R 09852336X ::1(53287)ERROR:  missing data for column "codigo_personas_personas"
+48083824R 09852336X ::1(53287)CONTEXT:  COPY visualizaciones, line 2: "23/6/2022"
+48083824R 09852336X ::1(53287)STATEMENT:  copy peliculas.visualizaciones from '/Users/alvarocamacho/visualizacionesRandom.csv' csv header delimiter ',';
+48083824R 09852336X ::1(53287)ERROR:  invalid input syntax for type date: "1980"
+48083824R 09852336X ::1(53287)CONTEXT:  COPY personas, line 2, column año_nacimiento: "1980"
+48083824R 09852336X ::1(53287)STATEMENT:  copy peliculas.personas from '/Users/alvarocamacho/personasRandom.csv' csv header delimiter ',';
+48083824R 09852336X ::1(53287)ERROR:  invalid input syntax for type numeric: "Nacionalidad53"
+48083824R 09852336X ::1(53287)CONTEXT:  COPY personas, line 2, column codigo_personas: "Nacionalidad53"
+48083824R 09852336X ::1(53287)STATEMENT:  copy peliculas.personas from '/Users/alvarocamacho/personasRandom.csv' csv header delimiter ',';
+	
+48083824R 09852336X ::1(53287)ERROR:  missing data for column "codigo_personas"
+48083824R 09852336X ::1(53287)CONTEXT:  COPY personas, line 2: "Pepe,Nacionalidad686/3/1979,"
+48083824R 09852336X ::1(53287)STATEMENT:  copy peliculas.personas from '/Users/alvarocamacho/personasRandom.csv' csv header delimiter ',';
+	
+48083824R 09852336X ::1(53287)ERROR:  duplicate key value violates unique constraint "personal_pk"
+48083824R 09852336X ::1(53287)DETAIL:  Key (codigo_personas)=(1) already exists.
+48083824R 09852336X ::1(53287)CONTEXT:  COPY personas, line 2
+48083824R 09852336X ::1(53287)STATEMENT:  copy peliculas.personas from '/Users/alvarocamacho/personasRandom.csv' csv header delimiter ',';
+	
+48083824R 09852336X ::1(53287)ERROR:  syntax error at or near "empty" at character 1
+48083824R 09852336X ::1(53287)STATEMENT:  empty table peliculas.personas
+48083824R 09852336X ::1(53287)ERROR:  missing data for column "codigo_director"
+48083824R 09852336X ::1(53287)CONTEXT:  COPY peliculas, line 2: "2017,Titulo47,188,FR,5,1"
+48083824R 09852336X ::1(53287)STATEMENT:  copy peliculas.peliculas from '/Users/alvarocamacho/peliculasRandom.csv' csv header delimiter ',';
+	
+48083824R 09852336X ::1(53287)ERROR:  missing data for column "codigo_pelicula_peliculas"
+48083824R 09852336X ::1(53287)CONTEXT:  COPY criticas, line 2: "5,Comentario3,6/7/2022"
+48083824R 09852336X ::1(53287)STATEMENT:  copy peliculas.criticas from '/Users/alvarocamacho/criticasRandom.csv' csv header delimiter ',';
+	
+48083824R 09852336X ::1(53287)ERROR:  missing data for column "codigo_director"
+48083824R 09852336X ::1(53287)CONTEXT:  COPY peliculas, line 2: "1965,Titulo89,142,RO,5,1"
+48083824R 09852336X ::1(53287)STATEMENT:  copy peliculas.peliculas from '/Users/alvarocamacho/peliculasRandom.csv' csv header delimiter ',';
+	
+48083824R 09852336X ::1(53287)ERROR:  missing data for column "codigo_personas_personas"
+48083824R 09852336X ::1(53287)CONTEXT:  COPY visualizaciones, line 2: "28/4/2022"
+48083824R 09852336X ::1(53287)STATEMENT:  copy peliculas.visualizaciones from '/Users/alvarocamacho/visualizacionesRandom.csv' csv header delimiter ',';
+	
+48083824R 09852336X ::1(53287)ERROR:  relation "personas" does not exist at character 15
+48083824R 09852336X ::1(53287)STATEMENT:  select * from personas
+48083824R 09852336X ::1(53287)LOG:  statement: DROP DATABASE peliculas;
+48083824R 09852336X ::1(53287)ERROR:  cannot drop the currently open database
+48083824R 09852336X ::1(53287)STATEMENT:  DROP DATABASE peliculas;
+48083824R 09852336X [local]LOG:  statement: drop database peliculas
+	;
+48083824R 09852336X [local]ERROR:  database "peliculas" is being accessed by other users
+48083824R 09852336X [local]DETAIL:  There are 2 other sessions using the database.
+48083824R 09852336X [local]STATEMENT:  drop database peliculas
+	;
+48083824R 09852336X [local]LOG:  statement: drop database peliculas
+	;
+48083824R 09852336X [local]ERROR:  syntax error at or near "CRETE" at character 1
+48083824R 09852336X [local]STATEMENT:  CRETE DATABASE pelis
+	;
+48083824R 09852336X [local]LOG:  statement: CREATE DATABASE pelis
+	;
+48083824R 09852336X ::1(55461)LOG:  statement: 
+	
+	-- object: peliculas | type: SCHEMA --
+	-- DROP SCHEMA IF EXISTS peliculas CASCADE;
+	CREATE SCHEMA peliculas;
+	-- ddl-end --
+	ALTER SCHEMA peliculas OWNER TO postgres;
+	-- ddl-end --
+	
+	SET search_path TO pg_catalog,public,peliculas;
+	-- ddl-end --
+	
+	-- object: peliculas.personas | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.personas CASCADE;
+	CREATE TABLE peliculas.personas (
+		nombre text,
+		nacionalidad text,
+		"año_nacimiento" date,
+		codigo_personas numeric NOT NULL,
+		CONSTRAINT personal_pk PRIMARY KEY (codigo_personas)
+	);
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.personas.nombre IS E'Nombre de la persona';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.personas.nacionalidad IS E'Nacionalidad de la persona';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.personas."año_nacimiento" IS E'Año de nacimiento';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.personas.codigo_personas IS E'Código de cada persona';
+	-- ddl-end --
+	ALTER TABLE peliculas.personas OWNER TO postgres;
+	-- ddl-end --
+	
+	-- object: peliculas.peliculas | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.peliculas CASCADE;
+	CREATE TABLE peliculas.peliculas (
+		"año" integer,
+		titulo text,
+		duracion integer,
+		idioma char(2),
+		calificacion text,
+		codigo_pelicula numeric NOT NULL,
+		codigo_director numeric,
+		CONSTRAINT peliculas_pk PRIMARY KEY (codigo_pelicula)
+	);
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.peliculas."año" IS E'Año de la película';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.peliculas.titulo IS E'Titulo de la película';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.peliculas.duracion IS E'Duración de la película';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.peliculas.idioma IS E'Idioma de la película, dos caracteres: ES (Español), EN (Inglés), etc';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.peliculas.calificacion IS E'Calificación entre 0 y 10 estrellas';
+	-- ddl-end --
+	ALTER TABLE peliculas.peliculas OWNER TO postgres;
+	-- ddl-end --
+	
+	-- object: peliculas.actua | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.actua CASCADE;
+	CREATE TABLE peliculas.actua (
+		codigo_pelicula_peliculas numeric NOT NULL,
+		codigo_personas_personas numeric,
+		CONSTRAINT actua_pk PRIMARY KEY (codigo_pelicula_peliculas)
+	);
+	-- ddl-end --
+	
+	-- object: peliculas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.actua DROP CONSTRAINT IF EXISTS peliculas_fk CASCADE;
+	ALTER TABLE peliculas.actua ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas)
+	REFERENCES peliculas.peliculas (codigo_pelicula) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: peliculas.generos | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.generos CASCADE;
+	CREATE TABLE peliculas.generos (
+		genero text NOT NULL,
+		codigo_pelicula_peliculas numeric NOT NULL,
+		CONSTRAINT generos_pk PRIMARY KEY (genero,codigo_pelicula_peliculas)
+	);
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.generos.genero IS E'Género de la película';
+	-- ddl-end --
+	ALTER TABLE peliculas.generos OWNER TO postgres;
+	-- ddl-end --
+	
+	-- object: peliculas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.generos DROP CONSTRAINT IF EXISTS peliculas_fk CASCADE;
+	ALTER TABLE peliculas.generos ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas)
+	REFERENCES peliculas.peliculas (codigo_pelicula) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: peliculas.criticas | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.criticas CASCADE;
+	CREATE TABLE peliculas.criticas (
+		puntuacion integer,
+		texto text,
+		fecha date NOT NULL,
+		codigo_pelicula_peliculas numeric NOT NULL,
+		codigo_personas_personas numeric NOT NULL,
+		CONSTRAINT criticas_pk PRIMARY KEY (fecha,codigo_pelicula_peliculas,codigo_personas_personas)
+	);
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.criticas.puntuacion IS E'Puntuación de la película de 0 a 10';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.criticas.texto IS E'Texto de la crítica';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.criticas.fecha IS E'Fecha de la crítica';
+	-- ddl-end --
+	ALTER TABLE peliculas.criticas OWNER TO postgres;
+	-- ddl-end --
+	
+	-- object: personas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.actua DROP CONSTRAINT IF EXISTS personas_fk CASCADE;
+	ALTER TABLE peliculas.actua ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas)
+	REFERENCES peliculas.personas (codigo_personas) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: personas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.peliculas DROP CONSTRAINT IF EXISTS personas_fk CASCADE;
+	ALTER TABLE peliculas.peliculas ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_director)
+	REFERENCES peliculas.personas (codigo_personas) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: peliculas.visualizaciones | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.visualizaciones CASCADE;
+	CREATE TABLE peliculas.visualizaciones (
+		fecha date,
+		codigo_personas_personas numeric,
+		codigo_pelicula_peliculas numeric
+	
+	);
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.visualizaciones.fecha IS E'Fecha de la visualización de la película';
+	-- ddl-end --
+	ALTER TABLE peliculas.visualizaciones OWNER TO postgres;
+	-- ddl-end --
+	
+	-- object: personas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.visualizaciones DROP CONSTRAINT IF EXISTS personas_fk CASCADE;
+	ALTER TABLE peliculas.visualizaciones ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas)
+	REFERENCES peliculas.personas (codigo_personas) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: peliculas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.visualizaciones DROP CONSTRAINT IF EXISTS peliculas_fk CASCADE;
+	ALTER TABLE peliculas.visualizaciones ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas)
+	REFERENCES peliculas.peliculas (codigo_pelicula) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: peliculas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.criticas DROP CONSTRAINT IF EXISTS peliculas_fk CASCADE;
+	ALTER TABLE peliculas.criticas ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas)
+	REFERENCES peliculas.peliculas (codigo_pelicula) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: personas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.criticas DROP CONSTRAINT IF EXISTS personas_fk CASCADE;
+	ALTER TABLE peliculas.criticas ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas)
+	REFERENCES peliculas.personas (codigo_personas) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	
+	
+48083824R 09852336X ::1(55461)ERROR:  schema "pelis" does not exist
+48083824R 09852336X ::1(55461)STATEMENT:  COPY pelis.peliculas (año, titulo, duracion, idioma, calificacion) FROM '/Users/alvarocamacho/peliculasRandom.csv' CSV DELIMITER ',' 
+	
+48083824R 09852336X ::1(55461)ERROR:  extra data after last expected column
+48083824R 09852336X ::1(55461)CONTEXT:  COPY peliculas, line 1: "1964,Titulo26,113,EL,0,0"
+48083824R 09852336X ::1(55461)STATEMENT:  COPY peliculas.peliculas (año, titulo, duracion, idioma, calificacion) FROM '/Users/alvarocamacho/peliculasRandom.csv' CSV DELIMITER ',' 
+	
+48083824R 09852336X ::1(55461)ERROR:  null value in column "codigo_pelicula_peliculas" of relation "criticas" violates not-null constraint
+48083824R 09852336X ::1(55461)DETAIL:  Failing row contains (1, Comentario6, 2022-12-09, null, null).
+48083824R 09852336X ::1(55461)CONTEXT:  COPY criticas, line 1: "1,Comentario6,9/12/2022"
+48083824R 09852336X ::1(55461)STATEMENT:  COPY peliculas.criticas (puntuacion, texto, fecha) FROM '/Users/alvarocamacho/criticasRandom.csv' CSV DELIMITER ',' 
+	
+48083824R 09852336X ::1(55461)ERROR:  null value in column "codigo_pelicula_peliculas" of relation "generos" violates not-null constraint
+48083824R 09852336X ::1(55461)DETAIL:  Failing row contains (Genero4, null).
+48083824R 09852336X ::1(55461)CONTEXT:  COPY generos, line 1: "Genero4"
+48083824R 09852336X ::1(55461)STATEMENT:  COPY peliculas.generos (genero) FROM '/Users/alvarocamacho/generosRandom.csv' CSV DELIMITER ',' 
+	
+48083824R 09852336X [local]LOG:  statement: drop database pelis
+	;
+48083824R 09852336X [local]LOG:  statement: CREATE DATABASE peliculas
+	;
+48083824R 09852336X ::1(55981)LOG:  statement: CREATE SCHEMA peliculas;
+	-- ddl-end --
+	ALTER SCHEMA peliculas OWNER TO postgres;
+	-- ddl-end --
+	
+	SET search_path TO pg_catalog,public,peliculas;
+	-- ddl-end --
+	
+	-- object: peliculas.personas | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.personas CASCADE;
+	CREATE TABLE peliculas.personas (
+		nombre text,
+		nacionalidad text,
+		"año_nacimiento" date,
+		codigo_personas numeric NOT NULL,
+		CONSTRAINT personal_pk PRIMARY KEY (codigo_personas)
+	);
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.personas.nombre IS E'Nombre de la persona';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.personas.nacionalidad IS E'Nacionalidad de la persona';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.personas."año_nacimiento" IS E'Año de nacimiento';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.personas.codigo_personas IS E'Código de cada persona';
+	-- ddl-end --
+	ALTER TABLE peliculas.personas OWNER TO postgres;
+	-- ddl-end --
+	
+	-- object: peliculas.peliculas | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.peliculas CASCADE;
+	CREATE TABLE peliculas.peliculas (
+		"año" integer,
+		titulo text,
+		duracion integer,
+		idioma char(2),
+		calificacion text,
+		codigo_pelicula numeric NOT NULL,
+		codigo_director numeric,
+		CONSTRAINT peliculas_pk PRIMARY KEY (codigo_pelicula)
+	);
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.peliculas."año" IS E'Año de la película';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.peliculas.titulo IS E'Titulo de la película';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.peliculas.duracion IS E'Duración de la película';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.peliculas.idioma IS E'Idioma de la película, dos caracteres: ES (Español), EN (Inglés), etc';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.peliculas.calificacion IS E'Calificación entre 0 y 10 estrellas';
+	-- ddl-end --
+	ALTER TABLE peliculas.peliculas OWNER TO postgres;
+	-- ddl-end --
+	
+	-- object: peliculas.actua | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.actua CASCADE;
+	CREATE TABLE peliculas.actua (
+		codigo_pelicula_peliculas numeric NOT NULL,
+		codigo_personas_personas numeric,
+		CONSTRAINT actua_pk PRIMARY KEY (codigo_pelicula_peliculas)
+	);
+	-- ddl-end --
+	
+	-- object: peliculas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.actua DROP CONSTRAINT IF EXISTS peliculas_fk CASCADE;
+	ALTER TABLE peliculas.actua ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas)
+	REFERENCES peliculas.peliculas (codigo_pelicula) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: peliculas.generos | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.generos CASCADE;
+	CREATE TABLE peliculas.generos (
+		genero text NOT NULL,
+		codigo_pelicula_peliculas numeric NOT NULL,
+		CONSTRAINT generos_pk PRIMARY KEY (genero,codigo_pelicula_peliculas)
+	);
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.generos.genero IS E'Género de la película';
+	-- ddl-end --
+	ALTER TABLE peliculas.generos OWNER TO postgres;
+	-- ddl-end --
+	
+	-- object: peliculas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.generos DROP CONSTRAINT IF EXISTS peliculas_fk CASCADE;
+	ALTER TABLE peliculas.generos ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas)
+	REFERENCES peliculas.peliculas (codigo_pelicula) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: peliculas.criticas | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.criticas CASCADE;
+	CREATE TABLE peliculas.criticas (
+		puntuacion integer,
+		texto text,
+		fecha date NOT NULL,
+		codigo_pelicula_peliculas numeric NOT NULL,
+		codigo_personas_personas numeric NOT NULL,
+		CONSTRAINT criticas_pk PRIMARY KEY (fecha,codigo_pelicula_peliculas,codigo_personas_personas)
+	);
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.criticas.puntuacion IS E'Puntuación de la película de 0 a 10';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.criticas.texto IS E'Texto de la crítica';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.criticas.fecha IS E'Fecha de la crítica';
+	-- ddl-end --
+	ALTER TABLE peliculas.criticas OWNER TO postgres;
+	-- ddl-end --
+	
+	-- object: personas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.actua DROP CONSTRAINT IF EXISTS personas_fk CASCADE;
+	ALTER TABLE peliculas.actua ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas)
+	REFERENCES peliculas.personas (codigo_personas) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: personas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.peliculas DROP CONSTRAINT IF EXISTS personas_fk CASCADE;
+	ALTER TABLE peliculas.peliculas ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_director)
+	REFERENCES peliculas.personas (codigo_personas) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: peliculas.visualizaciones | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.visualizaciones CASCADE;
+	CREATE TABLE peliculas.visualizaciones (
+		fecha date,
+		codigo_personas_personas numeric,
+		codigo_pelicula_peliculas numeric
+	
+	);
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.visualizaciones.fecha IS E'Fecha de la visualización de la película';
+	-- ddl-end --
+	ALTER TABLE peliculas.visualizaciones OWNER TO postgres;
+	-- ddl-end --
+	
+	-- object: personas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.visualizaciones DROP CONSTRAINT IF EXISTS personas_fk CASCADE;
+	ALTER TABLE peliculas.visualizaciones ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas)
+	REFERENCES peliculas.personas (codigo_personas) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: peliculas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.visualizaciones DROP CONSTRAINT IF EXISTS peliculas_fk CASCADE;
+	ALTER TABLE peliculas.visualizaciones ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas)
+	REFERENCES peliculas.peliculas (codigo_pelicula) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: peliculas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.criticas DROP CONSTRAINT IF EXISTS peliculas_fk CASCADE;
+	ALTER TABLE peliculas.criticas ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas)
+	REFERENCES peliculas.peliculas (codigo_pelicula) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: personas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.criticas DROP CONSTRAINT IF EXISTS personas_fk CASCADE;
+	ALTER TABLE peliculas.criticas ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas)
+	REFERENCES peliculas.personas (codigo_personas) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	
+	
+48083824R 09852336X ::1(55981)ERROR:  null value in column "codigo_pelicula_peliculas" of relation "generos" violates not-null constraint
+48083824R 09852336X ::1(55981)DETAIL:  Failing row contains (Genero1, null).
+48083824R 09852336X ::1(55981)CONTEXT:  COPY generos, line 1: "Genero1"
+48083824R 09852336X ::1(55981)STATEMENT:  COPY peliculas.generos (genero) FROM '/Users/alvarocamacho/generosRandom.csv' CSV DELIMITER ',' 
+48083824R 09852336X ::1(55981)ERROR:  null value in column "codigo_pelicula_peliculas" of relation "generos" violates not-null constraint
+48083824R 09852336X ::1(55981)DETAIL:  Failing row contains (Genero1, null).
+48083824R 09852336X ::1(55981)CONTEXT:  COPY generos, line 1: "Genero1"
+48083824R 09852336X ::1(55981)STATEMENT:  COPY peliculas.generos (genero) FROM '/Users/alvarocamacho/generosRandom.csv' CSV DELIMITER ',' 
+	
+48083824R 09852336X [local]LOG:  statement: drop database peliculas
+	;
+48083824R 09852336X ::1(56645)ERROR:  syntax error at or near "asc" at character 40
+48083824R 09852336X ::1(56645)STATEMENT:  select precio from automovies order by asc
+48083824R 09852336X ::1(56645)ERROR:  syntax error at end of input at character 40
+48083824R 09852336X ::1(56645)STATEMENT:  select precio from automovies order by 
+48083824R 09852336X ::1(56645)ERROR:  relation "automovies" does not exist at character 20
+48083824R 09852336X ::1(56645)STATEMENT:  select precio from automovies order by precio asc
+48083824R 09852336X LOG:  received smart shutdown request
+48083824R 09852336X LOG:  background worker "logical replication launcher" (PID 19844) exited with exit code 1
+48083824R 09852336X LOG:  shutting down
+48083824R 09852336X LOG:  database system is shut down
+48083824R 09852336X LOG:  starting PostgreSQL 14.7 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+48083824R 09852336X LOG:  listening on IPv6 address "::1", port 5432
+48083824R 09852336X LOG:  listening on IPv4 address "127.0.0.1", port 5432
+48083824R 09852336X LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+48083824R 09852336X LOG:  database system was shut down at 2023-04-13 22:55:52 CEST
+48083824R 09852336X LOG:  database system is ready to accept connections
+48083824R 09852336X ::1(49298)ERROR:  function char_lenght(numeric) does not exist at character 12
+48083824R 09852336X ::1(49298)HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+48083824R 09852336X ::1(49298)STATEMENT:  select AVG(char_lenght(bastidor)) from automoviles  
+48083824R 09852336X ::1(49298)ERROR:  function lenght(numeric) does not exist at character 12
+48083824R 09852336X ::1(49298)HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+48083824R 09852336X ::1(49298)STATEMENT:  select AVG(lenght(bastidor)) from automoviles  
+48083824R 09852336X ::1(49298)ERROR:  function numeric_lenght(numeric) does not exist at character 12
+48083824R 09852336X ::1(49298)HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+48083824R 09852336X ::1(49298)STATEMENT:  select AVG(numeric_lenght(bastidor)) from automoviles  
+48083824R 09852336X ::1(49298)ERROR:  function char_lenght(text) does not exist at character 12
+48083824R 09852336X ::1(49298)HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+48083824R 09852336X ::1(49298)STATEMENT:  select AVG(char_lenght(modelo)) from automoviles  
+	
+48083824R 09852336X ::1(49298)ERROR:  syntax error at or near "select" at character 52
+48083824R 09852336X ::1(49298)STATEMENT:  select AVG(char_length(modelo)) from automoviles  
+	select bastidor from automoviles
+48083824R 09852336X ::1(49298)ERROR:  column "proveedor" does not exist at character 23
+48083824R 09852336X ::1(49298)STATEMENT:  select count(distinct proveedor) from compras
+48083824R 09852336X ::1(49298)ERROR:  syntax error at or near "select" at character 14
+48083824R 09852336X ::1(49298)STATEMENT:  select count(select distinct telefono from clientes where telefono BETWEEN 70000000 AND 90000000) 
+	
+48083824R 09852336X ::1(49298)ERROR:  syntax error at or near "from" at character 33
+48083824R 09852336X ::1(49298)STATEMENT:  select count( distinct telefono from clientes where telefono BETWEEN 70000000 AND 90000000) 
+	select avg(char_length(proveedor)) from automoviles
+48083824R 09852336X ::1(49298)ERROR:  column "count" does not exist at character 8
+48083824R 09852336X ::1(49298)STATEMENT:  select count telefono from clientes where telefono BETWEEN 70000000 AND 90000000
+	
+48083824R 09852336X ::1(49298)ERROR:  unterminated quoted string at or near "'2022-08-30’
+	" at character 80
+48083824R 09852336X ::1(49298)STATEMENT:  select count(distinct fecha) from compras where fecha BETWEEN '2022-02-01' AND '2022-08-30’
+	
+48083824R 09852336X ::1(49298)ERROR:  unterminated quoted string at or near "'2022-08-30’ AND (automoviles.proveedor=‘proovedor300’ OR automoviles.proovedor=‘proovedor500’) AND clientes.telefono BETWEEN 70000000 AND 90000000;" at character 219
+48083824R 09852336X ::1(49298)STATEMENT:  EXPLAIN
+	SELECT automoviles.modelo
+	FROM automoviles
+	INNER JOIN compras on automoviles.bastidor = compras.bastidor_auto 
+	INNER JOIN clientes on compras.dni_cli = clientes.dni
+	WHERE compras.fecha BETWEEN '2022-02-01' AND '2022-08-30’ AND (automoviles.proveedor=‘proovedor300’ OR automoviles.proovedor=‘proovedor500’) AND clientes.telefono BETWEEN 70000000 AND 90000000;
+48083824R 09852336X ::1(49298)ERROR:  column "‘proovedor300’" does not exist at character 259
+48083824R 09852336X ::1(49298)STATEMENT:  EXPLAIN
+	SELECT automoviles.modelo
+	FROM automoviles
+	INNER JOIN compras on automoviles.bastidor = compras.bastidor_auto 
+	INNER JOIN clientes on compras.dni_cli = clientes.dni
+	WHERE compras.fecha BETWEEN '2022-02-01' AND '2022-08-30' AND (automoviles.proveedor=‘proovedor300’ OR automoviles.proovedor=‘proovedor500’) AND clientes.telefono BETWEEN 70000000 AND 90000000;
+48083824R 09852336X ::1(49298)ERROR:  column automoviles.proovedor does not exist at character 277
+48083824R 09852336X ::1(49298)HINT:  Perhaps you meant to reference the column "automoviles.proveedor".
+48083824R 09852336X ::1(49298)STATEMENT:  EXPLAIN
+	SELECT automoviles.modelo
+	FROM automoviles
+	INNER JOIN compras on automoviles.bastidor = compras.bastidor_auto 
+	INNER JOIN clientes on compras.dni_cli = clientes.dni
+	WHERE compras.fecha BETWEEN '2022-02-01' AND '2022-08-30' AND (automoviles.proveedor='proovedor300' OR automoviles.proovedor='proovedor500') AND clientes.telefono BETWEEN 70000000 AND 90000000;
+48083824R 09852336X ::1(49298)ERROR:  function char_length(numeric) does not exist at character 12
+48083824R 09852336X ::1(49298)HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+48083824R 09852336X ::1(49298)STATEMENT:  select avg(char_length(dni_cli)) from compras
+48083824R 09852336X ::1(49298)LOG:  statement: CREATE DATABASE peliculas
+48083824R 09852336X ::1(51039)LOG:  statement: CREATE SCHEMA peliculas;
+	-- ddl-end --
+	ALTER SCHEMA peliculas OWNER TO postgres;
+	-- ddl-end --
+	
+	SET search_path TO pg_catalog,public,peliculas;
+	-- ddl-end --
+	
+	-- object: peliculas.personas | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.personas CASCADE;
+	CREATE TABLE peliculas.personas (
+		nombre text,
+		nacionalidad text,
+		"año_nacimiento" date,
+		codigo_personas numeric NOT NULL,
+		CONSTRAINT personal_pk PRIMARY KEY (codigo_personas)
+	);
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.personas.nombre IS E'Nombre de la persona';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.personas.nacionalidad IS E'Nacionalidad de la persona';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.personas."año_nacimiento" IS E'Año de nacimiento';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.personas.codigo_personas IS E'Código de cada persona';
+	-- ddl-end --
+	ALTER TABLE peliculas.personas OWNER TO postgres;
+	-- ddl-end --
+	
+	-- object: peliculas.peliculas | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.peliculas CASCADE;
+	CREATE TABLE peliculas.peliculas (
+		"año" integer,
+		titulo text,
+		duracion integer,
+		idioma char(2),
+		calificacion text,
+		codigo_pelicula numeric NOT NULL,
+		codigo_director numeric,
+		CONSTRAINT peliculas_pk PRIMARY KEY (codigo_pelicula)
+	);
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.peliculas."año" IS E'Año de la película';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.peliculas.titulo IS E'Titulo de la película';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.peliculas.duracion IS E'Duración de la película';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.peliculas.idioma IS E'Idioma de la película, dos caracteres: ES (Español), EN (Inglés), etc';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.peliculas.calificacion IS E'Calificación entre 0 y 10 estrellas';
+	-- ddl-end --
+	ALTER TABLE peliculas.peliculas OWNER TO postgres;
+	-- ddl-end --
+	
+	-- object: peliculas.actua | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.actua CASCADE;
+	CREATE TABLE peliculas.actua (
+		codigo_pelicula_peliculas numeric NOT NULL,
+		codigo_personas_personas numeric,
+		CONSTRAINT actua_pk PRIMARY KEY (codigo_pelicula_peliculas)
+	);
+	-- ddl-end --
+	
+	-- object: peliculas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.actua DROP CONSTRAINT IF EXISTS peliculas_fk CASCADE;
+	ALTER TABLE peliculas.actua ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas)
+	REFERENCES peliculas.peliculas (codigo_pelicula) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: peliculas.generos | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.generos CASCADE;
+	CREATE TABLE peliculas.generos (
+		genero text NOT NULL,
+		codigo_pelicula_peliculas numeric NOT NULL,
+		CONSTRAINT generos_pk PRIMARY KEY (genero,codigo_pelicula_peliculas)
+	);
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.generos.genero IS E'Género de la película';
+	-- ddl-end --
+	ALTER TABLE peliculas.generos OWNER TO postgres;
+	-- ddl-end --
+	
+	-- object: peliculas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.generos DROP CONSTRAINT IF EXISTS peliculas_fk CASCADE;
+	ALTER TABLE peliculas.generos ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas)
+	REFERENCES peliculas.peliculas (codigo_pelicula) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: peliculas.criticas | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.criticas CASCADE;
+	CREATE TABLE peliculas.criticas (
+		puntuacion integer,
+		texto text,
+		fecha date NOT NULL,
+		codigo_pelicula_peliculas numeric NOT NULL,
+		codigo_personas_personas numeric NOT NULL,
+		CONSTRAINT criticas_pk PRIMARY KEY (fecha,codigo_pelicula_peliculas,codigo_personas_personas)
+	);
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.criticas.puntuacion IS E'Puntuación de la película de 0 a 10';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.criticas.texto IS E'Texto de la crítica';
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.criticas.fecha IS E'Fecha de la crítica';
+	-- ddl-end --
+	ALTER TABLE peliculas.criticas OWNER TO postgres;
+	-- ddl-end --
+	
+	-- object: personas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.actua DROP CONSTRAINT IF EXISTS personas_fk CASCADE;
+	ALTER TABLE peliculas.actua ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas)
+	REFERENCES peliculas.personas (codigo_personas) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: personas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.peliculas DROP CONSTRAINT IF EXISTS personas_fk CASCADE;
+	ALTER TABLE peliculas.peliculas ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_director)
+	REFERENCES peliculas.personas (codigo_personas) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: peliculas.visualizaciones | type: TABLE --
+	-- DROP TABLE IF EXISTS peliculas.visualizaciones CASCADE;
+	CREATE TABLE peliculas.visualizaciones (
+		fecha date,
+		codigo_personas_personas numeric,
+		codigo_pelicula_peliculas numeric
+	
+	);
+	-- ddl-end --
+	COMMENT ON COLUMN peliculas.visualizaciones.fecha IS E'Fecha de la visualización de la película';
+	-- ddl-end --
+	ALTER TABLE peliculas.visualizaciones OWNER TO postgres;
+	-- ddl-end --
+	
+	-- object: personas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.visualizaciones DROP CONSTRAINT IF EXISTS personas_fk CASCADE;
+	ALTER TABLE peliculas.visualizaciones ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas)
+	REFERENCES peliculas.personas (codigo_personas) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: peliculas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.visualizaciones DROP CONSTRAINT IF EXISTS peliculas_fk CASCADE;
+	ALTER TABLE peliculas.visualizaciones ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas)
+	REFERENCES peliculas.peliculas (codigo_pelicula) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: peliculas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.criticas DROP CONSTRAINT IF EXISTS peliculas_fk CASCADE;
+	ALTER TABLE peliculas.criticas ADD CONSTRAINT peliculas_fk FOREIGN KEY (codigo_pelicula_peliculas)
+	REFERENCES peliculas.peliculas (codigo_pelicula) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	-- object: personas_fk | type: CONSTRAINT --
+	-- ALTER TABLE peliculas.criticas DROP CONSTRAINT IF EXISTS personas_fk CASCADE;
+	ALTER TABLE peliculas.criticas ADD CONSTRAINT personas_fk FOREIGN KEY (codigo_personas_personas)
+	REFERENCES peliculas.personas (codigo_personas) MATCH FULL
+	ON DELETE RESTRICT ON UPDATE RESTRICT;
+	-- ddl-end --
+	
+	
+	
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (16 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (17 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X ::1(51039)LOG:  statement: /*COPY peliculas.personas from '/Users/alvarocamacho/Desktop/PL2_BBDD/CSV/personasRandom.csv' WITH (FORMAT CSV, DELIMITER ',', ENCODING 'LATIN1');
+	COPY peliculas.peliculas from '/Users/alvarocamacho/Desktop/PL2_BBDD/CSV/peliculasRandom.csv' WITH (FORMAT CSV, DELIMITER ',', ENCODING 'LATIN1');
+	COPY peliculas.generos from '/Users/alvarocamacho/Desktop/PL2_BBDD/CSV/generosRandom.csv' WITH (FORMAT CSV, DELIMITER ',', ENCODING 'LATIN1');
+	COPY peliculas.criticas from '/Users/alvarocamacho/Desktop/PL2_BBDD/CSV/criticasRandom.csv' WITH (FORMAT CSV, DELIMITER ',', ENCODING 'LATIN1');
+	COPY peliculas.visualizaciones from '/Users/alvarocamacho/Desktop/PL2_BBDD/CSV/visualizacionesRandom.csv' WITH (FORMAT CSV, DELIMITER ',', ENCODING 'LATIN1');*/
+	
+	CREATE TEMP TABLE peliculas_a_borrar AS SELECT codigo_pelicula FROM peliculas.peliculas WHERE RANDOM() <= 0.3;
+48083824R 09852336X ::1(51039)LOG:  statement: CREATE INDEX indice_peliculas ON peliculas (codigo_pelicula, codigo_director);
+	
+48083824R 09852336X ::1(51039)LOG:  statement: CREATE INDEX indice_personas ON personas (codigo_personas, nacionalidad);
+48083824R 09852336X ::1(51039)LOG:  statement: CREATE INDEX indice_criticas ON criticas (codigo_pelicula_peliculas, codigo_personas_personas);
+48083824R 09852336X ::1(51039)LOG:  statement: CREATE INDEX indice_actua ON actua (codigo_pelicula_peliculas, codigo_personas_personas);
+48083824R 09852336X ::1(51039)LOG:  statement: CREATE INDEX indice_visualizaciones ON visualizaciones (codigo_pelicula_peliculas, codigo_personas_personas);
+48083824R 09852336X ::1(51039)LOG:  statement: CREATE INDEX indice_generos ON generos (codigo_pelicula_peliculas);
+48083824R 09852336X LOG:  checkpoints are occurring too frequently (21 seconds apart)
+48083824R 09852336X HINT:  Consider increasing the configuration parameter "max_wal_size".
+48083824R 09852336X ::1(51039)LOG:  statement: CREATE TABLE peliculas_ordenada AS SELECT * FROM peliculas ORDER BY codigo_pelicula;
+	
+48083824R 09852336X ::1(51039)LOG:  statement: CREATE TABLE personas_ordenada AS SELECT * FROM personas ORDER BY codigo_personas;
+	
+48083824R 09852336X ::1(51039)LOG:  statement: CREATE TABLE genero_ordenada AS SELECT * FROM genero ORDER BY genero;
+	
+48083824R 09852336X ::1(51039)ERROR:  relation "genero" does not exist at character 47
+48083824R 09852336X ::1(51039)STATEMENT:  CREATE TABLE genero_ordenada AS SELECT * FROM genero ORDER BY genero;
+	
+48083824R 09852336X ::1(51039)LOG:  statement: CREATE TABLE genero_ordenada AS SELECT * FROM generos ORDER BY genero;
+	
+48083824R 09852336X ::1(51039)LOG:  statement: CREATE INDEX indice_peliculas_ord ON peliculas_ordenada (codigo_pelicula, codigo_director);
+48083824R 09852336X ::1(51039)LOG:  statement: CREATE INDEX indice_personas_ord ON personas_ordenada (codigo_personas, nacionalidad);
+48083824R 09852336X ::1(51039)LOG:  statement: CREATE INDEX indice_generos_ord ON genero_ordenada (codigo_pelicula_peliculas);	
